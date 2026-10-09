@@ -1,0 +1,435 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Upcoming Luxury Events & Galas | Stackly Luxury Event Planner</title>
+  <meta name="description" content="Browse upcoming public and invitation-only galas, expos, and festivals.">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="container">
+      <div class="top-bar-inner">
+        <div class="top-bar-info">
+          <span><i class="fa-solid fa-location-dot" style="color:var(--gold);"></i> 742 Evergreen Plaza, Luxury Row, New York</span>
+          <a href="tel:+18005553836"><i class="fa-solid fa-phone" style="color:var(--gold);"></i> +1 (800) 555-EVNT</a>
+          <a href="mailto:concierge@stacklyevents.com"><i class="fa-solid fa-envelope" style="color:var(--gold);"></i> concierge@stacklyevents.com</a>
+        </div>
+        <div class="top-bar-social">
+          <a href="404.html" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="404.html" aria-label="Pinterest"><i class="fa-brands fa-pinterest"></i></a>
+          <a href="404.html" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="404.html" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <header class="main-header">
+    <div class="container">
+      <nav class="navbar">
+        <a href="index.html" class="brand-logo" aria-label="Stackly Home">
+          <img src="assets/images/logo.png" alt="Stackly" class="logo-img">
+        </a>
+
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link ">Home</a></li>
+          <li><a href="about.html" class="nav-link ">About</a></li>
+          <li><a href="services.html" class="nav-link ">Services</a></li>
+          <li><a href="events.html" class="nav-link active">Events</a></li>
+          <li><a href="gallery.html" class="nav-link ">Gallery</a></li>
+          <li><a href="packages.html" class="nav-link ">Packages</a></li>
+          <li><a href="contact.html" class="nav-link ">Contact</a></li>
+          </ul>
+
+        <div class="nav-cta-group">
+          <a href="login.html" class="btn btn-nav-login btn-sm">
+            <i class="fa-regular fa-user"></i> Login
+          </a>
+          <a href="book-event.html" class="btn btn-primary btn-sm">
+            <i class="fa-regular fa-calendar-check"></i> Book an Event
+          </a>
+          <button class="hamburger-btn" id="hamburger-btn" aria-label="Toggle Navigation Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+    <!-- Mobile Navigation Drawer Backdrop -->
+  <div class="mobile-nav-backdrop" id="mobile-backdrop"></div>
+
+  <!-- Mobile Navigation Drawer -->
+  <aside class="mobile-nav-drawer" id="mobile-drawer" aria-label="Mobile Navigation">
+    <div class="mobile-drawer-header">
+      <a href="index.html" class="brand-logo" aria-label="Stackly Home">
+        <img src="assets/images/logo.png" alt="Stackly" class="logo-img">
+      </a>
+      <button class="drawer-close-btn" id="drawer-close-btn" aria-label="Close menu">&times;</button>
+    </div>
+
+    <ul class="mobile-nav-links">
+      <li><a href="index.html" class="nav-link"><span>Home</span> <i class="fa-solid fa-arrow-right"></i></a></li>
+      <li><a href="about.html" class="nav-link"><span>About Us</span> <i class="fa-solid fa-arrow-right"></i></a></li>
+      <li><a href="services.html" class="nav-link"><span>Services</span> <i class="fa-solid fa-arrow-right"></i></a></li>
+      <li><a href="events.html" class="nav-link"><span>Events</span> <i class="fa-solid fa-arrow-right"></i></a></li>
+      <li><a href="gallery.html" class="nav-link"><span>Gallery</span> <i class="fa-solid fa-arrow-right"></i></a></li>
+      <li><a href="packages.html" class="nav-link"><span>Packages</span> <i class="fa-solid fa-arrow-right"></i></a></li>
+      <li><a href="contact.html" class="nav-link"><span>Contact</span> <i class="fa-solid fa-arrow-right"></i></a></li>
+      <li><a href="dashboard-user.html" class="nav-link"><span>Customer Dashboard</span> <i class="fa-solid fa-arrow-right"></i></a></li>
+      <li><a href="dashboard-admin.html" class="nav-link"><span>Agency Admin</span> <i class="fa-solid fa-arrow-right"></i></a></li>
+    </ul>
+
+    <div class="mobile-drawer-footer">
+      <div class="drawer-actions-group">
+        <a href="login.html" class="btn btn-drawer-login">
+          Account Login
+        </a>
+        <a href="book-event.html" class="btn btn-primary" style="width:100%;">
+          Book an Event
+        </a>
+      </div>
+
+      <div class="drawer-contact-box">
+        <a href="tel:+18005553868" class="drawer-contact-item">
+          <i class="fa-solid fa-phone"></i>
+          <span><strong>+1 (800) 555-EVNT</strong> (24/7 VIP)</span>
+        </a>
+        <a href="mailto:concierge@stacklyevents.com" class="drawer-contact-item">
+          <i class="fa-solid fa-envelope"></i>
+          <span>concierge@stacklyevents.com</span>
+        </a>
+      </div>
+    </div>
+  </aside>
+
+  <section class="page-banner">
+    <div class="container">
+      <div class="page-banner-content">
+        <h1>Curated Calendar of Events</h1>
+        <p>Explore upcoming showcases, royal nuptial galas, and leadership summits.</p>
+        <div class="breadcrumb">
+          <a href="index.html">Home</a> <i class="fa-solid fa-chevron-right" style="font-size:0.65rem;"></i> <span>Events</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="events-section">
+    <div class="container">
+      <!-- Search and Filter Bar -->
+      <div class="events-search-bar">
+        <div class="search-input-wrapper">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" id="events-search-input" class="form-control" placeholder="Search events by title, venue, or city...">
+        </div>
+      </div>
+
+      <div class="services-filter-bar" style="margin-bottom:2.5rem;">
+        <button class="filter-btn event-cat-btn active" data-category="all">All Events</button>
+        <button class="filter-btn event-cat-btn" data-category="weddings">Weddings</button>
+        <button class="filter-btn event-cat-btn" data-category="corporate">Corporate</button>
+        <button class="filter-btn event-cat-btn" data-category="social">Social Galas</button>
+      </div>
+
+      <div class="events-grid">
+        <!-- Event 1 -->
+        <article class="event-card event-item-card" data-category="weddings" data-title="The Imperial Grand Wedding Gala" data-location="St. Regis Ballroom New York">
+          <div class="event-thumb">
+            <img src="assets/images/event-gala.webp" alt="The Imperial Grand Wedding Gala" loading="lazy">
+            <div class="event-date-ribbon">
+              <div class="day">18</div>
+              <div class="month">Nov</div>
+            </div>
+          </div>
+          <div class="event-body">
+            <div class="event-meta">
+              <span><i class="fa-solid fa-location-dot"></i> St. Regis Ballroom</span>
+              <span><i class="fa-solid fa-users"></i> 350 VIP Guests</span>
+            </div>
+            <h3 class="event-title">The Imperial Grand Wedding Gala</h3>
+            <p class="event-desc">An opulent winter nuptial showcase featuring 10,000 Ecuadorian roses, five-course French gastronomy, and international orchestra.</p>
+            <div class="event-footer">
+              <span style="font-weight:700; color:var(--burgundy);"><i class="fa-solid fa-ticket"></i> Invitation Only</span>
+              <a href="event-details.html" class="btn btn-burgundy btn-sm">View Details & RSVP</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Event 2 -->
+        <article class="event-card event-item-card" data-category="social" data-title="Winter Solstice Masquerade Ball" data-location="The Glass Pavilion">
+          <div class="event-thumb">
+            <img src="assets/images/event-soiree.webp" alt="Winter Solstice Masquerade Ball" loading="lazy">
+            <div class="event-date-ribbon">
+              <div class="day">05</div>
+              <div class="month">Dec</div>
+            </div>
+          </div>
+          <div class="event-body">
+            <div class="event-meta">
+              <span><i class="fa-solid fa-location-dot"></i> The Glass Pavilion</span>
+              <span><i class="fa-solid fa-users"></i> 250 Guests</span>
+            </div>
+            <h3 class="event-title">Winter Solstice Masquerade Ball</h3>
+            <p class="event-desc">Champagne towers, Venetian masks, operatic interludes, and midnight waltzes under illuminated crystal chandeliers.</p>
+            <div class="event-footer">
+              <span style="font-weight:700; color:var(--burgundy);"><i class="fa-solid fa-ticket"></i> Tickets Available</span>
+              <a href="event-details.html" class="btn btn-burgundy btn-sm">View Details & RSVP</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Event 3 -->
+        <article class="event-card event-item-card" data-category="corporate" data-title="Global Haute Leaders Awards" data-location="Metropolitan Club">
+          <div class="event-thumb">
+            <img src="assets/images/event-awards.webp" alt="Global Haute Leaders Awards" loading="lazy">
+            <div class="event-date-ribbon">
+              <div class="day">12</div>
+              <div class="month">Jan</div>
+            </div>
+          </div>
+          <div class="event-body">
+            <div class="event-meta">
+              <span><i class="fa-solid fa-location-dot"></i> Metropolitan Club</span>
+              <span><i class="fa-solid fa-users"></i> 400 Delegates</span>
+            </div>
+            <h3 class="event-title">Global Haute Leaders Awards</h3>
+            <p class="event-desc">Recognizing creative visionaries and global innovators in a black-tie banquet with live broadcast stage production.</p>
+            <div class="event-footer">
+              <span style="font-weight:700; color:var(--burgundy);"><i class="fa-solid fa-ticket"></i> Registration Open</span>
+              <a href="event-details.html" class="btn btn-burgundy btn-sm">View Details & RSVP</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3: Past Landmark Event Case Studies -->
+  <section class="page-section section-white">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag gold"><i class="fa-solid fa-chart-line"></i> Proven Track Record</div>
+        <h2 class="section-title">Past Landmark Event Case Studies</h2>
+        <p class="section-subtitle">
+          Real metrics and production overviews from our most iconic recent celebrations.
+        </p>
+      </div>
+
+      <div class="case-studies-grid">
+        <div class="case-study-card">
+          <img src="assets/images/service-wedding.webp" alt="The Hamptons Grand Nuptials" class="case-study-img" loading="lazy">
+          <div class="case-study-content">
+            <span class="case-study-tag">Private Wedding &bull; 3-Day Gala</span>
+            <h3>The Hamptons Grand Royal Nuptials</h3>
+            <p>A full estate transformation featuring custom climate-controlled glass marquee, 25,000 imported blush roses, and 12-piece live orchestra.</p>
+            <div class="case-study-stats">
+              <div class="case-stat-item"><span class="num">350</span><span class="lbl">VIP Guests</span></div>
+              <div class="case-stat-item"><span class="num">100%</span><span class="lbl">On-Time Timeline</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="case-study-card">
+          <img src="assets/images/service-corporate.webp" alt="Global Tech Horizon Summit" class="case-study-img" loading="lazy">
+          <div class="case-study-content">
+            <span class="case-study-tag">Corporate &bull; Leadership Summit</span>
+            <h3>Global Tech Horizon Executive Dinner</h3>
+            <p>Futuristic 3D projection mapping, synchronized robotic stage lighting, and a multi-course dinner paired with vintage reserve wines.</p>
+            <div class="case-study-stats">
+              <div class="case-stat-item"><span class="num">500</span><span class="lbl">Tech Leaders</span></div>
+              <div class="case-stat-item"><span class="num">48 Hr</span><span class="lbl">Turnkey Build</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="case-study-card">
+          <img src="assets/images/service-private.webp" alt="Monaco Yacht Club Anniversary Gala" class="case-study-img" loading="lazy">
+          <div class="case-study-content">
+            <span class="case-study-tag">Social Gala &bull; Destination</span>
+            <h3>Monaco Yacht Club Golden Jubilee</h3>
+            <p>High-security Mediterranean harbor soiree with synchronized drone light show, floating cocktail bars, and Michelin-starred culinary stations.</p>
+            <div class="case-study-stats">
+              <div class="case-stat-item"><span class="num">200</span><span class="lbl">Elite Attendees</span></div>
+              <div class="case-stat-item"><span class="num">5 Stars</span><span class="lbl">Press Rating</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 4: Seasonal Planning Calendar Guide -->
+  <section class="page-section section-dark">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag gold" style="color:var(--gold-light);"><i class="fa-solid fa-calendar-days"></i> Booking Calendar</div>
+        <h2 class="section-title">Seasonal Availability & Reservation Guide</h2>
+        <p class="section-subtitle">
+          Plan strategically with our seasonal availability calendar and peak timeline indicators.
+        </p>
+      </div>
+
+      <div class="features-expanded-grid">
+        <div class="feature-expanded-card">
+          <div class="feature-expanded-icon"><i class="fa-solid fa-sun"></i></div>
+          <h3>Spring & Summer Galas (May – Sept)</h3>
+          <p>Ideal for open-air vineyard ceremonies, rooftop receptions, and coastal estate celebrations. <em>High Demand – 9 to 12 months advance booking advised.</em></p>
+        </div>
+
+        <div class="feature-expanded-card">
+          <div class="feature-expanded-icon"><i class="fa-solid fa-leaf"></i></div>
+          <h3>Autumn Harvest Soirées (Oct – Nov)</h3>
+          <p>Rich burgundy and champagne aesthetic with warm candlelight, seasonal culinary pairings, and indoor grand ballroom dining.</p>
+        </div>
+
+        <div class="feature-expanded-card">
+          <div class="feature-expanded-icon"><i class="fa-solid fa-snowflake"></i></div>
+          <h3>Winter Imperial Banquets (Dec – Feb)</h3>
+          <p>Opulent winter wonderland galas with crystal chandeliers, ice sculptures, and dramatic theatrical lighting productions.</p>
+        </div>
+
+        <div class="feature-expanded-card">
+          <div class="feature-expanded-icon"><i class="fa-solid fa-clock-rotate-left"></i></div>
+          <h3>Express Turnaround Concierge</h3>
+          <p>Specialized rapid-response atelier capable of planning and executing flawless private celebrations within 14 to 30 days.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 5: 3-Step Fast Track Booking -->
+  <section class="page-section section-blush">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag gold"><i class="fa-solid fa-bolt"></i> Fast Track Execution</div>
+        <h2 class="section-title">Host Your Next Event with Stackly</h2>
+        <p class="section-subtitle">
+          From first concept sketch to the final toast, we make event planning effortless.
+        </p>
+      </div>
+
+      <div class="roadmap-grid">
+        <div class="roadmap-card">
+          <span class="roadmap-number">01</span>
+          <h4>Private Consultation</h4>
+          <p>Share your vision, date preferences, guest list estimates, and sensory aspirations with our lead producer.</p>
+        </div>
+
+        <div class="roadmap-card">
+          <span class="roadmap-number">02</span>
+          <h4>Custom Design Atelier</h4>
+          <p>Receive interactive 3D spatial renders, floral swatch samples, and tasting menu proposals tailored to your budget.</p>
+        </div>
+
+        <div class="roadmap-card">
+          <span class="roadmap-number">03</span>
+          <h4>Turnkey Celebration</h4>
+          <p>Relax as our 360-degree on-site management team coordinates every vendor, guest transit, and lighting cue.</p>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 3rem;">
+        <a href="book-event.html" class="btn btn-burgundy btn-lg"><i class="fa-regular fa-calendar-check"></i> Plan Your Event Today</a>
+      </div>
+    </div>
+  </section>
+
+    <!-- Main Footer -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Col 1: Brand & Social -->
+        <div class="footer-col footer-about">
+          <a href="index.html" class="brand-logo" aria-label="Stackly Home">
+            <img src="assets/images/logo-light.png" alt="Stackly" class="logo-img">
+          </a>
+          <p>
+            Architects of high-society celebrations, landmark weddings, and high-profile corporate galas worldwide.
+          </p>
+          <div class="footer-social">
+            <a href="404.html" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="404.html" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="404.html" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="404.html" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <!-- Col 2: Quick Links -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Stackly</a></li>
+            <li><a href="services.html">Bespoke Services</a></li>
+            <li><a href="events.html">Events Calendar</a></li>
+            <li><a href="gallery.html">Visual Portfolio</a></li>
+            <li><a href="packages.html">Pricing &amp; Packages</a></li>
+            <li><a href="contact.html">Contact Concierge</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: VIP Portals -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Client Concierge</h4>
+          <ul class="footer-links">
+            <li><a href="book-event.html">Reserve Event Date</a></li>
+            <li><a href="dashboard-user.html">Host VIP Dashboard</a></li>
+            <li><a href="dashboard-admin.html">Executive Director Suite</a></li>
+            <li><a href="login.html">Client Account Login</a></li>
+            <li><a href="register.html">Host Registration</a></li>
+            <li><a href="404.html">VIP Lounge Access</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Newsletter -->
+        <div class="footer-col footer-newsletter-col">
+          <h4 class="footer-heading">Luxury Gazette</h4>
+          <p class="footer-newsletter-desc">
+            Subscribe for private invitations, culinary previews, and event architectural inspirations.
+          </p>
+          <form class="newsletter-form" id="newsletter-form" action="#" method="POST" onsubmit="event.preventDefault(); if(window.showToast) window.showToast('Thank you for subscribing to the Luxury Gazette!', 'success'); this.reset();">
+            <div class="newsletter-input-group">
+              <input type="email" placeholder="Your Email Address" required aria-label="Your Email">
+              <button type="submit" class="btn-newsletter">Join</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Stackly Luxury Event Planner. All rights reserved. Designed for extraordinary milestones.</p>
+        <div class="footer-bottom-links">
+          <a href="404.html">Privacy Policy</a>
+          <a href="404.html">Terms of Service</a>
+          <a href="404.html">Security Protocol</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="lightbox-modal" id="gallery-lightbox" aria-modal="true" role="dialog">
+    <button class="lightbox-close" aria-label="Close lightbox">&times;</button>
+    <button class="lightbox-nav lightbox-prev" aria-label="Previous image"><i class="fa-solid fa-chevron-left"></i></button>
+    <div class="lightbox-content">
+      <img src="" alt="Stackly Showcase" class="lightbox-image">
+      <div class="lightbox-caption"></div>
+    </div>
+    <button class="lightbox-nav lightbox-next" aria-label="Next image"><i class="fa-solid fa-chevron-right"></i></button>
+  </div>
+
+  <div id="toast-container"></div>
+  <script src="js/script.js"></script>
+</body>
+</html>
+
+

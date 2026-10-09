@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Client & Executive Login | Stackly Luxury Event Planner</title>
+  <meta name="description" content="Access your client portal or administrative suite on Stackly.">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="auth-page">
+    <!-- Top Floating Return to Home Button -->
+    <a href="index.html" class="auth-return-home-btn" aria-label="Return to Home">
+      <i class="fa-solid fa-arrow-left"></i> Return to Home
+    </a>
+
+    <div class="auth-container">
+      <div class="auth-header">
+        <a href="index.html" class="brand-logo" aria-label="Stackly Home">
+          <img src="assets/images/logo.png" alt="Stackly" class="logo-img">
+        </a>
+        <h2>Welcome Back</h2>
+        <p>Sign in to manage your luxury reservations or concierge suite.</p>
+      </div>
+
+      <!-- Quick Demo Credentials Box -->
+      <div class="demo-credentials-box">
+        <strong><i class="fa-solid fa-key" style="color:var(--burgundy);"></i> Demo Credentials:</strong>
+        <div class="demo-btns">
+          <button type="button" id="fill-demo-user" class="demo-pill-btn">Fill Demo User</button>
+          <button type="button" id="fill-demo-admin" class="demo-pill-btn">Fill Demo Admin</button>
+        </div>
+      </div>
+
+      <form id="login-form">
+        <div class="form-group">
+          <label class="form-label" for="login-role">Select Role</label>
+          <select id="login-role" class="form-control">
+            <option value="User">Client / Host (User)</option>
+            <option value="Admin">Concierge / Admin</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="login-email">Email Address <span class="required">*</span></label>
+          <input type="email" id="login-email" class="form-control" placeholder="name@domain.com" autocomplete="email" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="login-password">Password <span class="required">*</span></label>
+          <div class="input-with-icon">
+            <input type="password" id="login-password" class="form-control" placeholder="••••••••" autocomplete="current-password" required>
+            <button type="button" class="input-icon-btn toggle-password-btn" data-target="login-password" aria-label="Toggle password visibility">
+              <i class="fa-regular fa-eye"></i>
+            </button>
+          </div>
+        </div>
+
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1.5rem; font-size:0.85rem;">
+          <label style="display:flex; align-items:center; gap:0.4rem; cursor:pointer;">
+            <input type="checkbox" id="remember-me"> Remember me
+          </label>
+          <a href="404.html" style="color:var(--burgundy); font-weight:600;">Forgot Password?</a>
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="width:100%; margin-bottom:1.5rem;">
+          <i class="fa-solid fa-arrow-right-to-bracket"></i> Sign In to Portal
+        </button>
+
+        <div style="text-align:center; font-size:0.875rem; color:var(--text-muted);">
+          Don't have an account yet? <a href="register.html" style="color:var(--burgundy); font-weight:700;">Create an Account</a>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div id="toast-container"></div>
+  <script src="js/script.js"></script>
+</body>
+</html>

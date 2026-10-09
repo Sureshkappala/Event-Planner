@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Haute Visual Portfolio & Photo Gallery | Stackly Luxury Event Planner</title>
+  <meta name="description" content="Browse high-resolution photographs of our stage lighting, floral arrangements, and luxury venues.">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="container">
+      <div class="top-bar-inner">
+        <div class="top-bar-info">
+          <span><i class="fa-solid fa-location-dot" style="color:var(--gold);"></i> 742 Evergreen Plaza, Luxury Row, New York</span>
+          <a href="tel:+18005553836"><i class="fa-solid fa-phone" style="color:var(--gold);"></i> +1 (800) 555-EVNT</a>
+          <a href="mailto:concierge@stacklyevents.com"><i class="fa-solid fa-envelope" style="color:var(--gold);"></i> concierge@stacklyevents.com</a>
+        </div>
+        <div class="top-bar-social">
+          <a href="404.html" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="404.html" aria-label="Pinterest"><i class="fa-brands fa-pinterest"></i></a>
+          <a href="404.html" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="404.html" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <header class="main-header">
+    <div class="container">
+      <nav class="navbar">
+        <a href="index.html" class="brand-logo" aria-label="Stackly Home">
+          <img src="assets/images/logo.png" alt="Stackly" class="logo-img">
+        </a>
+
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link ">Home</a></li>
+          <li><a href="about.html" class="nav-link ">About</a></li>
+          <li><a href="services.html" class="nav-link ">Services</a></li>
+          <li><a href="events.html" class="nav-link ">Events</a></li>
+          <li><a href="gallery.html" class="nav-link active">Gallery</a></li>
+          <li><a href="packages.html" class="nav-link ">Packages</a></li>
+          <li><a href="contact.html" class="nav-link ">Contact</a></li>
+          </ul>
+
+        <div class="nav-cta-group">
+          <a href="login.html" class="btn btn-nav-login btn-sm">
+            <i class="fa-regular fa-user"></i> Login
+          </a>
+          <a href="book-event.html" class="btn btn-primary btn-sm">
+            <i class="fa-regular fa-calendar-check"></i> Book an Event
+          </a>
+          <button class="hamburger-btn" id="hamburger-btn" aria-label="Toggle Navigation Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+    <!-- Mobile Navigation Drawer Backdrop -->
+  <div class="mobile-nav-backdrop" id="mobile-backdrop"></div>
+
+  <!-- Mobile Navigation Drawer -->
+  <aside class="mobile-nav-drawer" id="mobile-drawer" aria-label="Mobile Navigation">
+    <div class="mobile-drawer-header">
+      <a href="index.html" class="brand-logo" aria-label="Stackly Home">
+        <img src="assets/images/logo.png" alt="Stackly" class="logo-img">
+      </a>
+      <button class="drawer-close-btn" id="drawer-close-btn" aria-label="Close menu">&times;</button>
+    </div>
+
+    <ul class="mobile-nav-links">
+      <li><a href="index.html" class="nav-link"><span>Home</span> <i class="fa-solid fa-arrow-right"></i></a></li>
+      <li><a href="about.html" class="nav-link"><span>About Us</span> <i class="fa-solid fa-arrow-right"></i></a></li>
+      <li><a href="services.html" class="nav-link"><span>Services</span> <i class="fa-solid fa-arrow-right"></i></a></li>
+      <li><a href="events.html" class="nav-link"><span>Events</span> <i class="fa-solid fa-arrow-right"></i></a></li>
+      <li><a href="gallery.html" class="nav-link"><span>Gallery</span> <i class="fa-solid fa-arrow-right"></i></a></li>
+      <li><a href="packages.html" class="nav-link"><span>Packages</span> <i class="fa-solid fa-arrow-right"></i></a></li>
+      <li><a href="contact.html" class="nav-link"><span>Contact</span> <i class="fa-solid fa-arrow-right"></i></a></li>
+      <li><a href="dashboard-user.html" class="nav-link"><span>Customer Dashboard</span> <i class="fa-solid fa-arrow-right"></i></a></li>
+      <li><a href="dashboard-admin.html" class="nav-link"><span>Agency Admin</span> <i class="fa-solid fa-arrow-right"></i></a></li>
+    </ul>
+
+    <div class="mobile-drawer-footer">
+      <div class="drawer-actions-group">
+        <a href="login.html" class="btn btn-drawer-login">
+          Account Login
+        </a>
+        <a href="book-event.html" class="btn btn-primary" style="width:100%;">
+          Book an Event
+        </a>
+      </div>
+
+      <div class="drawer-contact-box">
+        <a href="tel:+18005553868" class="drawer-contact-item">
+          <i class="fa-solid fa-phone"></i>
+          <span><strong>+1 (800) 555-EVNT</strong> (24/7 VIP)</span>
+        </a>
+        <a href="mailto:concierge@stacklyevents.com" class="drawer-contact-item">
+          <i class="fa-solid fa-envelope"></i>
+          <span>concierge@stacklyevents.com</span>
+        </a>
+      </div>
+    </div>
+  </aside>
+
+  <section class="page-banner">
+    <div class="container">
+      <div class="page-banner-content">
+        <h1>Visual Portfolio</h1>
+        <p>A glimpse into our world of sensory artistry, grand stages, and immaculate floral styling.</p>
+        <div class="breadcrumb">
+          <a href="index.html">Home</a> <i class="fa-solid fa-chevron-right" style="font-size:0.65rem;"></i> <span>Gallery</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="gallery-section">
+    <div class="container">
+      <div class="services-filter-bar">
+        <button class="filter-btn gallery-filter-btn active" data-filter="all">All Portfolio</button>
+        <button class="filter-btn gallery-filter-btn" data-filter="Stage & Light">Stages & Lighting</button>
+        <button class="filter-btn gallery-filter-btn" data-filter="Floral Curation">Floral & Decor</button>
+        <button class="filter-btn gallery-filter-btn" data-filter="Banquet Styling">Banquet & Dining</button>
+        <button class="filter-btn gallery-filter-btn" data-filter="Atmosphere">Atmosphere</button>
+        <button class="filter-btn gallery-filter-btn" data-filter="Artisanal Patisserie">Patisserie & Cakes</button>
+        <button class="filter-btn gallery-filter-btn" data-filter="Mixology">Mixology & Bars</button>
+      </div>
+
+      <div class="gallery-grid">
+        <div class="gallery-item" data-category="Stage & Light" data-title="Grand Cathedral Stage Illumination">
+          <img src="assets/images/gallery-stage.webp" alt="Grand Cathedral Stage Lighting" loading="lazy">
+          <div class="gallery-overlay">
+            <div class="gallery-icon"><i class="fa-solid fa-expand"></i></div>
+            <div class="gallery-info">
+              <h4>Grand Stage Illumination</h4>
+              <p>Stage & Light</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="Floral Curation" data-title="Blush Rose & Gold Floral Arch">
+          <img src="assets/images/gallery-floral.webp" alt="Blush Rose Floral Pavilion" loading="lazy">
+          <div class="gallery-overlay">
+            <div class="gallery-icon"><i class="fa-solid fa-expand"></i></div>
+            <div class="gallery-info">
+              <h4>Blush Rose Arch Pavilion</h4>
+              <p>Floral Curation</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="Banquet Styling" data-title="Candlelit Imperial Banquet Table">
+          <img src="assets/images/gallery-dining.webp" alt="Candlelit Imperial Banquet Table" loading="lazy">
+          <div class="gallery-overlay">
+            <div class="gallery-icon"><i class="fa-solid fa-expand"></i></div>
+            <div class="gallery-info">
+              <h4>Candlelit Imperial Banquet</h4>
+              <p>Banquet Styling</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="Atmosphere" data-title="Golden Hour Festoon Lighting">
+          <img src="assets/images/gallery-lighting.webp" alt="Golden Hour Outdoor Festoon Lighting" loading="lazy">
+          <div class="gallery-overlay">
+            <div class="gallery-icon"><i class="fa-solid fa-expand"></i></div>
+            <div class="gallery-info">
+              <h4>Golden Hour Canopy Lights</h4>
+              <p>Atmosphere</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="Artisanal Patisserie" data-title="Five-Tier Fondant & Gold Foil Wedding Cake">
+          <img src="assets/images/gallery-cake.webp" alt="Luxury Wedding Cake" loading="lazy">
+          <div class="gallery-overlay">
+            <div class="gallery-icon"><i class="fa-solid fa-expand"></i></div>
+            <div class="gallery-info">
+              <h4>Gold Foil Artisanal Cake</h4>
+              <p>Artisanal Patisserie</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="Mixology" data-title="Signature Champagne Cocktail Lounge">
+          <img src="assets/images/gallery-cocktail.webp" alt="Luxury Mixology Cocktail Bar" loading="lazy">
+          <div class="gallery-overlay">
+            <div class="gallery-icon"><i class="fa-solid fa-expand"></i></div>
+            <div class="gallery-info">
+              <h4>Signature Mixology Lounge</h4>
+              <p>Mixology</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="Stage & Light" data-title="Acoustic Gala Pavilion">
+          <img src="assets/images/hero-venue.webp" alt="Acoustic Gala Pavilion" loading="lazy">
+          <div class="gallery-overlay">
+            <div class="gallery-icon"><i class="fa-solid fa-expand"></i></div>
+            <div class="gallery-info">
+              <h4>Crystal Ballroom Pavilion</h4>
+              <p>Stage & Light</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="Banquet Styling" data-title="Royal Gold Tableware Ensemble">
+          <img src="assets/images/about-story.webp" alt="Royal Gold Tableware Ensemble" loading="lazy">
+          <div class="gallery-overlay">
+            <div class="gallery-icon"><i class="fa-solid fa-expand"></i></div>
+            <div class="gallery-info">
+              <h4>Executive Banquet Arrangement</h4>
+              <p>Banquet Styling</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="Atmosphere" data-title="Grand Chandelier Gala Soirée">
+          <img src="assets/images/event-gala.webp" alt="Grand Chandelier Gala Soirée" loading="lazy">
+          <div class="gallery-overlay">
+            <div class="gallery-icon"><i class="fa-solid fa-expand"></i></div>
+            <div class="gallery-info">
+              <h4>Grand Chandelier Gala</h4>
+              <p>Atmosphere</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="Floral Curation" data-title="Botanical Floral Cathedral & Arch">
+          <img src="assets/images/service-wedding.webp" alt="Botanical Floral Cathedral" loading="lazy">
+          <div class="gallery-overlay">
+            <div class="gallery-icon"><i class="fa-solid fa-expand"></i></div>
+            <div class="gallery-info">
+              <h4>Botanical Floral Cathedral</h4>
+              <p>Floral Curation</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="Stage & Light" data-title="Global Haute Leadership Summit Stage">
+          <img src="assets/images/event-awards.webp" alt="Global Haute Leadership Stage" loading="lazy">
+          <div class="gallery-overlay">
+            <div class="gallery-icon"><i class="fa-solid fa-expand"></i></div>
+            <div class="gallery-info">
+              <h4>Global Haute Stage</h4>
+              <p>Stage & Light</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="Mixology" data-title="Sommelier Wine Cellar & Tasting Salon">
+          <img src="assets/images/service-private.webp" alt="Sommelier Wine Cellar Tasting" loading="lazy">
+          <div class="gallery-overlay">
+            <div class="gallery-icon"><i class="fa-solid fa-expand"></i></div>
+            <div class="gallery-info">
+              <h4>Sommelier Wine Salon</h4>
+              <p>Mixology</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3: Behind-The-Scenes Fabrication Atelier -->
+  <section class="page-section section-white">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag gold"><i class="fa-solid fa-screwdriver-wrench"></i> Atelier Craftsmanship</div>
+        <h2 class="section-title">Behind The Scenes of Stackly Productions</h2>
+        <p class="section-subtitle">
+          Discover the rigorous engineering, floral artistry, and technical rehearsals preceding each grand reveal.
+        </p>
+      </div>
+
+      <div class="features-expanded-grid">
+        <div class="feature-expanded-card">
+          <div class="feature-expanded-icon"><i class="fa-solid fa-layer-group"></i></div>
+          <h3>Custom Stage & Truss Rigging</h3>
+          <p>Heavy-duty structural rigging for aerial acrobats, motorized kinetic chandeliers, and panoramic curved LED display backdrops.</p>
+        </div>
+
+        <div class="feature-expanded-card">
+          <div class="feature-expanded-icon"><i class="fa-solid fa-scissors"></i></div>
+          <h3>Handmade Botanical Installations</h3>
+          <p>Over 40 floral artisans conditioning and hand-wiring thousands of individual blossoms during the 24 hours prior to guest arrival.</p>
+        </div>
+
+        <div class="feature-expanded-card">
+          <div class="feature-expanded-icon"><i class="fa-solid fa-sliders"></i></div>
+          <h3>Lighting & Acoustic Balancing</h3>
+          <p>Precision calibration of warm 2700K tungsten hues and concert-grade digital audio processing tailored to venue acoustics.</p>
+        </div>
+
+        <div class="feature-expanded-card">
+          <div class="feature-expanded-icon"><i class="fa-solid fa-wine-glass"></i></div>
+          <h3>Tablescape Prototype Testing</h3>
+          <p>Full 1:1 scale mockups in our Manhattan studio allowing clients to experience exact linen textures, flatware weight, and candlelight density.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 4: Signature Color Moodboards -->
+  <section class="page-section section-dark">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag gold" style="color:var(--gold-light);"><i class="fa-solid fa-palette"></i> Haute Palettes</div>
+        <h2 class="section-title">Curated Color Themes & Moodboards</h2>
+        <p class="section-subtitle">
+          Explore our signature chromatic palettes designed to evoke sophisticated emotional resonance.
+        </p>
+      </div>
+
+      <div class="values-grid">
+        <div class="value-card">
+          <div style="display:flex; gap:0.5rem; margin-bottom:1.25rem;">
+            <span style="width:28px; height:28px; border-radius:50%; background:#4A0E17; border:2px solid #D4AF37;"></span>
+            <span style="width:28px; height:28px; border-radius:50%; background:#D4AF37; border:2px solid #FFF;"></span>
+            <span style="width:28px; height:28px; border-radius:50%; background:#FAF7F2; border:2px solid #D4AF37;"></span>
+          </div>
+          <h3>Imperial Burgundy & Gold</h3>
+          <p>Deep velvet burgundy drapery, hand-gilded candelabras, and warm champagne illumination for regal winter banquets.</p>
+        </div>
+
+        <div class="value-card">
+          <div style="display:flex; gap:0.5rem; margin-bottom:1.25rem;">
+            <span style="width:28px; height:28px; border-radius:50%; background:#F7E7E9; border:2px solid #D4AF37;"></span>
+            <span style="width:28px; height:28px; border-radius:50%; background:#FFFFFF; border:2px solid #D4AF37;"></span>
+            <span style="width:28px; height:28px; border-radius:50%; background:#D4AF37; border:2px solid #FFF;"></span>
+          </div>
+          <h3>Blush Rose & Alabaster</h3>
+          <p>Delicate blush peony florals, mother-of-pearl table chargers, and sheer ivory silk canopies for romantic garden ceremonies.</p>
+        </div>
+
+        <div class="value-card">
+          <div style="display:flex; gap:0.5rem; margin-bottom:1.25rem;">
+            <span style="width:28px; height:28px; border-radius:50%; background:#1E1B1C; border:2px solid #D4AF37;"></span>
+            <span style="width:28px; height:28px; border-radius:50%; background:#D4AF37; border:2px solid #FFF;"></span>
+            <span style="width:28px; height:28px; border-radius:50%; background:#2B060B; border:2px solid #D4AF37;"></span>
+          </div>
+          <h3>Noir Obsidian & Champagne</h3>
+          <p>Black marble mirrored flooring, crystal prism installations, and dramatic amber pinpoint lighting for corporate galas.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 5: Live Social Moments -->
+  <section class="page-section section-blush">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag gold"><i class="fa-brands fa-instagram"></i> #StacklyEvents</div>
+        <h2 class="section-title">Captured Celebrations in the Wild</h2>
+        <p class="section-subtitle">
+          Recent candid captures shared by our esteemed guests and event hosts worldwide.
+        </p>
+      </div>
+
+      <div class="social-stream-grid">
+        <div class="social-stream-item">
+          <img src="assets/images/gallery-floral.webp" alt="Floral Arches" loading="lazy">
+          <div class="social-stream-overlay">
+            <span><i class="fa-solid fa-heart"></i> 1.4k</span>
+            <span><i class="fa-solid fa-comment"></i> 89</span>
+          </div>
+        </div>
+
+        <div class="social-stream-item">
+          <img src="assets/images/gallery-cake.webp" alt="Haute Cake" loading="lazy">
+          <div class="social-stream-overlay">
+            <span><i class="fa-solid fa-heart"></i> 2.1k</span>
+            <span><i class="fa-solid fa-comment"></i> 142</span>
+          </div>
+        </div>
+
+        <div class="social-stream-item">
+          <img src="assets/images/gallery-stage.webp" alt="Gala Stage" loading="lazy">
+          <div class="social-stream-overlay">
+            <span><i class="fa-solid fa-heart"></i> 3.5k</span>
+            <span><i class="fa-solid fa-comment"></i> 210</span>
+          </div>
+        </div>
+
+        <div class="social-stream-item">
+          <img src="assets/images/gallery-cocktail.webp" alt="Mixology" loading="lazy">
+          <div class="social-stream-overlay">
+            <span><i class="fa-solid fa-heart"></i> 980</span>
+            <span><i class="fa-solid fa-comment"></i> 64</span>
+          </div>
+        </div>
+
+        <div class="social-stream-item">
+          <img src="assets/images/gallery-lighting.webp" alt="Lighting" loading="lazy">
+          <div class="social-stream-overlay">
+            <span><i class="fa-solid fa-heart"></i> 1.8k</span>
+            <span><i class="fa-solid fa-comment"></i> 112</span>
+          </div>
+        </div>
+
+        <div class="social-stream-item">
+          <img src="assets/images/gallery-dining.webp" alt="Dining" loading="lazy">
+          <div class="social-stream-overlay">
+            <span><i class="fa-solid fa-heart"></i> 2.7k</span>
+            <span><i class="fa-solid fa-comment"></i> 185</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <!-- Main Footer -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Col 1: Brand & Social -->
+        <div class="footer-col footer-about">
+          <a href="index.html" class="brand-logo" aria-label="Stackly Home">
+            <img src="assets/images/logo-light.png" alt="Stackly" class="logo-img">
+          </a>
+          <p>
+            Architects of high-society celebrations, landmark weddings, and high-profile corporate galas worldwide.
+          </p>
+          <div class="footer-social">
+            <a href="404.html" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="404.html" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="404.html" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="404.html" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <!-- Col 2: Quick Links -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Stackly</a></li>
+            <li><a href="services.html">Bespoke Services</a></li>
+            <li><a href="events.html">Events Calendar</a></li>
+            <li><a href="gallery.html">Visual Portfolio</a></li>
+            <li><a href="packages.html">Pricing &amp; Packages</a></li>
+            <li><a href="contact.html">Contact Concierge</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: VIP Portals -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Client Concierge</h4>
+          <ul class="footer-links">
+            <li><a href="book-event.html">Reserve Event Date</a></li>
+            <li><a href="dashboard-user.html">Host VIP Dashboard</a></li>
+            <li><a href="dashboard-admin.html">Executive Director Suite</a></li>
+            <li><a href="login.html">Client Account Login</a></li>
+            <li><a href="register.html">Host Registration</a></li>
+            <li><a href="404.html">VIP Lounge Access</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Newsletter -->
+        <div class="footer-col footer-newsletter-col">
+          <h4 class="footer-heading">Luxury Gazette</h4>
+          <p class="footer-newsletter-desc">
+            Subscribe for private invitations, culinary previews, and event architectural inspirations.
+          </p>
+          <form class="newsletter-form" id="newsletter-form" action="#" method="POST" onsubmit="event.preventDefault(); if(window.showToast) window.showToast('Thank you for subscribing to the Luxury Gazette!', 'success'); this.reset();">
+            <div class="newsletter-input-group">
+              <input type="email" placeholder="Your Email Address" required aria-label="Your Email">
+              <button type="submit" class="btn-newsletter">Join</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Stackly Luxury Event Planner. All rights reserved. Designed for extraordinary milestones.</p>
+        <div class="footer-bottom-links">
+          <a href="404.html">Privacy Policy</a>
+          <a href="404.html">Terms of Service</a>
+          <a href="404.html">Security Protocol</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="lightbox-modal" id="gallery-lightbox" aria-modal="true" role="dialog">
+    <button class="lightbox-close" aria-label="Close lightbox">&times;</button>
+    <button class="lightbox-nav lightbox-prev" aria-label="Previous image"><i class="fa-solid fa-chevron-left"></i></button>
+    <div class="lightbox-content">
+      <img src="" alt="Stackly Showcase" class="lightbox-image">
+      <div class="lightbox-caption"></div>
+    </div>
+    <button class="lightbox-nav lightbox-next" aria-label="Next image"><i class="fa-solid fa-chevron-right"></i></button>
+  </div>
+
+  <div id="toast-container"></div>
+  <script src="js/script.js"></script>
+</body>
+</html>
+
+

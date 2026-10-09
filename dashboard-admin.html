@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Master Executive Admin Suite | Stackly Luxury Event Planner</title>
+  <meta name="description" content="Full administrative suite for managing event bookings, revenue, and client inquiries.">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="dashboard-layout">
+    <!-- Sidebar / Drawer -->
+    <aside class="dashboard-sidebar" id="dashboard-sidebar">
+      <div class="dashboard-sidebar-header">
+        <a href="dashboard-admin.html" class="brand-logo" aria-label="Stackly Dashboard">
+          <img src="assets/images/logo-light.png" alt="Stackly" class="logo-img">
+        </a>
+        <button class="dashboard-sidebar-close" id="dashboard-sidebar-close" aria-label="Close Navigation">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <!-- Sidebar User Profile Card -->
+      <div class="dashboard-sidebar-user">
+        <div class="sidebar-user-avatar" id="sidebar-admin-avatar">K</div>
+        <div class="sidebar-user-details">
+          <div class="sidebar-user-name" id="sidebar-admin-name">Kappalasuresh92</div>
+          <div class="sidebar-user-role" id="sidebar-admin-role">EXECUTIVE ADMIN &bull; STACKLY</div>
+        </div>
+      </div>
+
+      <nav class="dashboard-nav">
+        <button class="dashboard-nav-item active" data-tab="adm-overview"><i class="fa-solid fa-gauge"></i> Executive Overview</button>
+        <button class="dashboard-nav-item" data-tab="adm-bookings"><i class="fa-solid fa-clipboard-list"></i> Manage Bookings</button>
+        <button class="dashboard-nav-item" data-tab="adm-events"><i class="fa-solid fa-calendar-plus"></i> Events Catalog</button>
+        <button class="dashboard-nav-item" data-tab="adm-services"><i class="fa-solid fa-wand-magic-sparkles"></i> Services &amp; Tiers</button>
+        <button class="dashboard-nav-item" data-tab="adm-messages"><i class="fa-solid fa-inbox"></i> Leads &amp; Messages</button>
+        <button class="dashboard-nav-item" data-tab="adm-reports"><i class="fa-solid fa-chart-line"></i> Revenue Analytics</button>
+        <button class="dashboard-nav-item" data-tab="adm-book-event"><i class="fa-solid fa-calendar-plus"></i> Book Client Event</button>
+        <a href="login.html" class="dashboard-nav-item logout logout-trigger"><i class="fa-solid fa-right-from-bracket"></i> Sign Out</a>
+      </nav>
+    </aside>
+
+    <!-- Mobile Drawer Backdrop -->
+    <div class="dashboard-backdrop" id="dashboard-backdrop"></div>
+
+    <!-- Main Content Area -->
+    <main class="dashboard-main">
+      <!-- Topbar Header -->
+      <header class="dashboard-topbar">
+        <div class="topbar-left">
+          <button class="dashboard-hamburger-btn" id="dashboard-hamburger-btn" aria-label="Open Navigation">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <h1 class="topbar-title">Overview Dashboard</h1>
+        </div>
+
+        <div class="topbar-right">
+          <button class="btn btn-quick-action" onclick="document.querySelector('[data-tab=adm-book-event]').click()">
+            <i class="fa-solid fa-plus"></i> Quick Action
+          </button>
+          <button class="topbar-bell-btn" onclick="showToast('You have 1 pending booking request to review.', 'info')" aria-label="Notifications">
+            <i class="fa-regular fa-bell"></i>
+            <span class="bell-badge-dot"></span>
+          </button>
+        </div>
+      </header>
+
+      <div class="dashboard-content-body">
+        <!-- ==================== TAB 1: EXECUTIVE OVERVIEW ==================== -->
+        <div class="dashboard-tab-content active" id="adm-overview">
+          <!-- Executive Welcome & Active Credentials Card -->
+          <div class="dashboard-welcome-banner">
+            <div class="welcome-banner-header">
+              <h2 class="welcome-banner-title">Welcome back,<br><span id="admin-welcome-name">Kappalasuresh92</span> <span class="wave-emoji">&#x1F44F;</span></h2>
+            </div>
+            
+            <div class="welcome-credentials-pills">
+              <div class="credential-pill">
+                <i class="fa-solid fa-user"></i> <span>Name:</span> <strong id="admin-cred-name">Kappalasuresh92</strong>
+              </div>
+              <div class="credential-pill">
+                <i class="fa-solid fa-envelope"></i> <span>Email:</span> <strong id="admin-cred-email">kappalasuresh92@gmail.com</strong>
+              </div>
+              <div class="credential-pill">
+                <i class="fa-solid fa-shield-halved"></i> <span>Role:</span> <strong id="admin-cred-role">System Administrator</strong>
+              </div>
+              <div class="credential-pill active-session-pill">
+                <span class="pulse-indicator"></span> <strong>ACTIVE SESSION</strong>
+              </div>
+            </div>
+
+            <div class="welcome-banner-actions">
+              <button type="button" class="btn btn-outline-light btn-sm" onclick="document.querySelector('[data-tab=adm-services]').click()">Account Settings</button>
+              <button type="button" class="btn btn-plan-new btn-sm" onclick="document.querySelector('[data-tab=adm-book-event]').click()">+ Plan New Trip</button>
+            </div>
+          </div>
+          <!-- KPI Metrics Row -->
+          <div class="stats-cards-grid">
+            <div class="stat-metric-card">
+              <div class="stat-metric-info">
+                <h4>Pipeline Revenue</h4>
+                <div class="value text-gold-gradient" id="admin-total-revenue">$148,500</div>
+              </div>
+              <div class="stat-metric-icon"><i class="fa-solid fa-sack-dollar"></i></div>
+            </div>
+
+            <div class="stat-metric-card">
+              <div class="stat-metric-info">
+                <h4>Total Reservations</h4>
+                <div class="value" id="admin-total-bookings">4</div>
+              </div>
+              <div class="stat-metric-icon"><i class="fa-solid fa-calendar-check"></i></div>
+            </div>
+
+            <div class="stat-metric-card">
+              <div class="stat-metric-info">
+                <h4>Action Required (Pending)</h4>
+                <div class="value" id="admin-pending-bookings" style="color:#B7950B;">1</div>
+              </div>
+              <div class="stat-metric-icon" style="background:#FEF9E7; color:#B7950B;"><i class="fa-solid fa-bell"></i></div>
+            </div>
+
+            <div class="stat-metric-card">
+              <div class="stat-metric-info">
+                <h4>Client Rating Score</h4>
+                <div class="value" style="color:#1E8449;">4.98 / 5.0</div>
+              </div>
+              <div class="stat-metric-icon" style="background:#E8F8F0; color:#1E8449;"><i class="fa-solid fa-star"></i></div>
+            </div>
+          </div>
+
+          <!-- Master Bookings Table Console -->
+          <div class="data-table-container" id="admin-bookings">
+            <div class="data-table-header">
+              <div>
+                <h3 style="font-size:1.25rem; color:var(--burgundy-dark);"><i class="fa-solid fa-list-check" style="color:var(--gold);"></i> Client Booking Requests</h3>
+                <p style="font-size:0.8rem; color:var(--text-muted); margin:0;">Real-time reservations with instant one-click approval, rejection, and review.</p>
+              </div>
+              <div style="display:flex; gap:0.75rem; flex-wrap:wrap;">
+                <input type="text" id="admin-search-input" placeholder="Search client, ID, date..." class="form-control" style="width:220px; padding:0.45rem 0.85rem; font-size:0.85rem;">
+                <select id="admin-filter-status" class="form-control" style="width:150px; padding:0.45rem 0.85rem; font-size:0.85rem;">
+                  <option value="All">All Statuses</option>
+                  <option value="Confirmed">Confirmed</option>
+                  <option value="Pending">Pending</option>
+                  <option value="Rejected">Rejected</option>
+                  <option value="Completed">Completed</option>
+                </select>
+              </div>
+            </div>
+            <div class="data-table-wrapper">
+              <table class="custom-table">
+                <thead>
+                  <tr>
+                    <th>Booking ID</th>
+                    <th>Client Contact</th>
+                    <th>Event Type</th>
+                    <th>Date</th>
+                    <th>Guests</th>
+                    <th>Status</th>
+                    <th>Quick Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="admin-bookings-table-body">
+                  <!-- Populated dynamically via JS -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Logistics Deployment & Leads Desk -->
+          <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:1.75rem; margin-top:2.5rem;">
+            <div style="background:var(--ivory-light); border-radius:var(--radius-md); padding:2rem; border:1px solid rgba(212,175,55,0.25); box-shadow:var(--shadow-sm);">
+              <h4 style="color:var(--burgundy-dark); font-size:1.15rem; margin-bottom:1.25rem; display:flex; align-items:center; gap:0.5rem;">
+                <i class="fa-solid fa-truck-ramp-box" style="color:var(--gold);"></i> Live Production Deployments
+              </h4>
+              <div style="display:flex; flex-direction:column; gap:1rem; font-size:0.88rem;">
+                <div style="display:flex; justify-content:space-between; align-items:center; padding-bottom:0.75rem; border-bottom:1px solid rgba(212,175,55,0.15);">
+                  <div>
+                    <strong>Hamptons Nuptials Rigging</strong>
+                    <div style="font-size:0.78rem; color:var(--text-muted);">Lead: Elena Rostova &bull; 8 Artisans</div>
+                  </div>
+                  <span class="status-badge confirmed">On Schedule</span>
+                </div>
+                <div style="display:flex; justify-content:space-between; align-items:center; padding-bottom:0.75rem; border-bottom:1px solid rgba(212,175,55,0.15);">
+                  <div>
+                    <strong>Metropolitan Club Audio-Visual</strong>
+                    <div style="font-size:0.78rem; color:var(--text-muted);">Lead: Marcus Shaw &bull; 4 Techs</div>
+                  </div>
+                  <span class="status-badge pending">Soundcheck 4 PM</span>
+                </div>
+                <div style="display:flex; justify-content:space-between; align-items:center;">
+                  <div>
+                    <strong>Belvedere Floral Delivery</strong>
+                    <div style="font-size:0.78rem; color:var(--text-muted);">Holland Direct Cargo</div>
+                  </div>
+                  <span class="status-badge completed">Cleared Customs</span>
+                </div>
+              </div>
+            </div>
+
+            <div style="background:var(--ivory-light); border-radius:var(--radius-md); padding:2rem; border:1px solid rgba(212,175,55,0.25); box-shadow:var(--shadow-sm);">
+              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1.25rem;">
+                <h4 style="color:var(--burgundy-dark); font-size:1.15rem; margin:0; display:flex; align-items:center; gap:0.5rem;">
+                  <i class="fa-solid fa-inbox" style="color:var(--gold);"></i> VIP Inquiries &amp; Leads
+                </h4>
+                <button onclick="document.querySelector('[data-tab=adm-messages]').click()" class="btn btn-outline btn-sm" style="padding:0.25rem 0.6rem; font-size:0.75rem;">View All</button>
+              </div>
+              <div id="admin-quick-leads-list" style="display:flex; flex-direction:column; gap:0.85rem; font-size:0.88rem;">
+                <!-- Populated dynamically via JS -->
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ==================== TAB 2: MANAGE BOOKINGS FULL ==================== -->
+        <div class="dashboard-tab-content" id="adm-bookings">
+          <div class="data-table-container">
+            <div class="data-table-header">
+              <div>
+                <h3 style="font-size:1.35rem; color:var(--burgundy-dark);"><i class="fa-solid fa-clipboard-list" style="color:var(--gold);"></i> Complete Client Database</h3>
+                <p style="font-size:0.85rem; color:var(--text-muted); margin:0;">Full administrative control: approve, reject, reschedule, or export reservations.</p>
+              </div>
+              <button onclick="exportBookingsCSV()" class="btn btn-outline btn-sm"><i class="fa-solid fa-download"></i> Export CSV</button>
+            </div>
+            <div class="data-table-wrapper">
+              <table class="custom-table">
+                <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>Client Name</th>
+                    <th>Email / Phone</th>
+                    <th>Type</th>
+                    <th>Date</th>
+                    <th>Guests</th>
+                    <th>Package</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="admin-full-bookings-body">
+                  <!-- Populated via script.js -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- ==================== TAB 3: EVENTS CATALOG ==================== -->
+        <div class="dashboard-tab-content" id="adm-events">
+          <div style="background:var(--ivory-light); border-radius:var(--radius-lg); padding:2.5rem; border:1px solid rgba(212,175,55,0.25); box-shadow:var(--shadow-sm);">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:2rem; flex-wrap:wrap; gap:1rem;">
+              <div>
+                <h3 style="font-size:1.45rem; color:var(--burgundy-dark);"><i class="fa-solid fa-calendar-plus" style="color:var(--gold);"></i> Master Events Catalog</h3>
+                <p style="color:var(--text-muted); font-size:0.85rem; margin:0;">Active public galas and ticketed celebration experiences.</p>
+              </div>
+              <button onclick="document.getElementById('add-event-modal').classList.add('active')" class="btn btn-primary btn-sm"><i class="fa-solid fa-plus"></i> Create New Event</button>
+            </div>
+
+            <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:1.75rem;">
+              <div style="background:var(--ivory); border-radius:var(--radius-md); border:1px solid var(--ivory-dark); padding:1.5rem;">
+                <span class="status-badge confirmed" style="margin-bottom:0.75rem; display:inline-block;">Published</span>
+                <h4 style="font-size:1.15rem; color:var(--burgundy-dark); margin-bottom:0.4rem;">The Imperial Grand Wedding Gala</h4>
+                <p style="font-size:0.85rem; color:var(--text-body); margin-bottom:1rem;">The Grand St. Regis Ballroom &bull; Nov 18, 2026</p>
+                <div style="display:flex; justify-content:space-between; font-size:0.8rem; font-weight:600; color:var(--text-muted); border-top:1px solid rgba(212,175,55,0.2); padding-top:0.75rem;">
+                  <span>Capacity: 350 Guests</span>
+                  <span style="color:#27ae60;">320 Confirmed</span>
+                </div>
+              </div>
+
+              <div style="background:var(--ivory); border-radius:var(--radius-md); border:1px solid var(--ivory-dark); padding:1.5rem;">
+                <span class="status-badge confirmed" style="margin-bottom:0.75rem; display:inline-block;">Published</span>
+                <h4 style="font-size:1.15rem; color:var(--burgundy-dark); margin-bottom:0.4rem;">Global Haute Leaders Awards</h4>
+                <p style="font-size:0.85rem; color:var(--text-body); margin-bottom:1rem;">Metropolitan Club &bull; Jan 12, 2027</p>
+                <div style="display:flex; justify-content:space-between; font-size:0.8rem; font-weight:600; color:var(--text-muted); border-top:1px solid rgba(212,175,55,0.2); padding-top:0.75rem;">
+                  <span>Capacity: 400 Delegates</span>
+                  <span style="color:#27ae60;">385 Registered</span>
+                </div>
+              </div>
+
+              <div style="background:var(--ivory); border-radius:var(--radius-md); border:1px solid var(--ivory-dark); padding:1.5rem;">
+                <span class="status-badge pending" style="margin-bottom:0.75rem; display:inline-block;">Draft Review</span>
+                <h4 style="font-size:1.15rem; color:var(--burgundy-dark); margin-bottom:0.4rem;">Belvedere Glasshouse Soirée</h4>
+                <p style="font-size:0.85rem; color:var(--text-body); margin-bottom:1rem;">Belvedere Glasshouse &bull; Dec 05, 2026</p>
+                <div style="display:flex; justify-content:space-between; font-size:0.8rem; font-weight:600; color:var(--text-muted); border-top:1px solid rgba(212,175,55,0.2); padding-top:0.75rem;">
+                  <span>Capacity: 120 VIPs</span>
+                  <span style="color:#f39c12;">Pending Holds</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ==================== TAB 4: SERVICES & TIERS ==================== -->
+        <div class="dashboard-tab-content" id="adm-services">
+          <div style="background:var(--ivory-light); border-radius:var(--radius-lg); padding:2.5rem; border:1px solid rgba(212,175,55,0.25); box-shadow:var(--shadow-sm);">
+            <h3 style="font-size:1.45rem; color:var(--burgundy-dark); margin-bottom:1.5rem;"><i class="fa-solid fa-wand-magic-sparkles" style="color:var(--gold);"></i> Services &amp; Pricing Management</h3>
+            
+            <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:1.75rem;">
+              <div style="background:var(--ivory); border-radius:var(--radius-md); padding:1.75rem; border:1px solid var(--ivory-dark);">
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.75rem;">
+                  <h4 style="font-size:1.2rem; color:var(--burgundy-dark); margin:0;">Classic Elegance</h4>
+                  <strong style="color:var(--burgundy); font-size:1.15rem;">$2,500+</strong>
+                </div>
+                <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:1rem;">Day-of execution, 8 hours coordination, baseline florals.</p>
+                <button onclick="showToast('Tier pricing updated.', 'success')" class="btn btn-outline btn-sm" style="width:100%;">Edit Tier Rules</button>
+              </div>
+
+              <div style="background:var(--ivory); border-radius:var(--radius-md); padding:1.75rem; border:1px solid var(--ivory-dark);">
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.75rem;">
+                  <h4 style="font-size:1.2rem; color:var(--burgundy-dark); margin:0;">Royal Grande</h4>
+                  <strong style="color:var(--burgundy); font-size:1.15rem;">$5,900+</strong>
+                </div>
+                <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:1rem;">Full bespoke design, 3D renders, custom lighting, 8 staff.</p>
+                <button onclick="showToast('Tier pricing updated.', 'success')" class="btn btn-outline btn-sm" style="width:100%;">Edit Tier Rules</button>
+              </div>
+
+              <div style="background:var(--ivory); border-radius:var(--radius-md); padding:1.75rem; border:1px solid var(--gold);">
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.75rem;">
+                  <h4 style="font-size:1.2rem; color:var(--burgundy-dark); margin:0;">Imperial Bespoke</h4>
+                  <strong style="color:var(--burgundy); font-size:1.15rem;">$12,500+</strong>
+                </div>
+                <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:1rem;">Haute production, 4K VR, imported botanicals, 16+ concierge crew.</p>
+                <button onclick="showToast('Tier pricing updated.', 'success')" class="btn btn-primary btn-sm" style="width:100%;">Edit Tier Rules</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ==================== TAB 5: LEADS & MESSAGES ==================== -->
+        <div class="dashboard-tab-content" id="adm-messages">
+          <div class="data-table-container">
+            <div class="data-table-header">
+              <div>
+                <h3 style="font-size:1.35rem; color:var(--burgundy-dark);"><i class="fa-solid fa-envelope-open-text" style="color:var(--gold);"></i> Client Messages &amp; Inquiry Inbox</h3>
+                <p style="font-size:0.85rem; color:var(--text-muted); margin:0;">Direct inquiries submitted through website forms and concierge hotlines.</p>
+              </div>
+            </div>
+            <div id="admin-inbox-list" style="padding:1.5rem; display:flex; flex-direction:column; gap:1rem;">
+              <!-- Rendered dynamically from script.js -->
+            </div>
+          </div>
+        </div>
+
+        <!-- ==================== TAB 6: REVENUE ANALYTICS ==================== -->
+        <div class="dashboard-tab-content" id="adm-reports">
+          <div style="background:var(--ivory-light); border-radius:var(--radius-lg); padding:2.5rem; border:1px solid rgba(212,175,55,0.25); box-shadow:var(--shadow-sm);">
+            <h3 style="font-size:1.45rem; color:var(--burgundy-dark); margin-bottom:1.5rem;"><i class="fa-solid fa-chart-line" style="color:var(--gold);"></i> Revenue &amp; Category Analytics</h3>
+            
+            <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:2rem;">
+              <div>
+                <h4 style="font-size:1.1rem; color:var(--burgundy-dark); margin-bottom:1rem;">Revenue Breakdown by Category</h4>
+                <div style="display:flex; flex-direction:column; gap:1rem;">
+                  <div>
+                    <div style="display:flex; justify-content:space-between; font-size:0.85rem; font-weight:600; margin-bottom:0.35rem;">
+                      <span>Royal Nuptials &amp; Weddings</span>
+                      <strong style="color:var(--burgundy);">$86,000 (58%)</strong>
+                    </div>
+                    <div style="height:8px; background:#EAE4D9; border-radius:4px; overflow:hidden;">
+                      <div style="width:58%; height:100%; background:var(--burgundy);"></div>
+                    </div>
+                  </div>
+
+                  <div>
+                    <div style="display:flex; justify-content:space-between; font-size:0.85rem; font-weight:600; margin-bottom:0.35rem;">
+                      <span>Corporate &amp; Leadership Summits</span>
+                      <strong style="color:var(--gold-dark);">$38,500 (26%)</strong>
+                    </div>
+                    <div style="height:8px; background:#EAE4D9; border-radius:4px; overflow:hidden;">
+                      <div style="width:26%; height:100%; background:var(--gold);"></div>
+                    </div>
+                  </div>
+
+                  <div>
+                    <div style="display:flex; justify-content:space-between; font-size:0.85rem; font-weight:600; margin-bottom:0.35rem;">
+                      <span>Private Soir&eacute;es &amp; Anniversaries</span>
+                      <strong style="color:#27ae60;">$24,000 (16%)</strong>
+                    </div>
+                    <div style="height:8px; background:#EAE4D9; border-radius:4px; overflow:hidden;">
+                      <div style="width:16%; height:100%; background:#27ae60;"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div style="background:var(--ivory); border-radius:var(--radius-md); padding:1.75rem; border:1px solid var(--ivory-dark);">
+                <h4 style="font-size:1.1rem; color:var(--burgundy-dark); margin-bottom:0.75rem;">Year-over-Year Growth Summary</h4>
+                <p style="font-size:0.88rem; color:var(--text-body); line-height:1.6; margin-bottom:1rem;">
+                  Q3/Q4 booking reservations have grown by <strong>+34%</strong> compared to the previous fiscal year, driven predominantly by destination galas in Lake Como and New York flagship ballroom buyouts.
+                </p>
+                <div style="font-size:0.8rem; color:var(--text-muted);"><i class="fa-solid fa-circle-info" style="color:var(--gold);"></i> Audited by Deloitte Luxury Advisory</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- ==================== TAB: BOOK CLIENT EVENT (INSIDE ADMIN DASHBOARD) ==================== -->
+        <div class="dashboard-tab-content" id="adm-book-event">
+          <div style="background:var(--ivory-light); border-radius:var(--radius-lg); padding:2.5rem; border:1px solid rgba(212,175,55,0.25); box-shadow:var(--shadow-sm); max-width:900px;">
+            <div class="section-header" style="text-align:left; margin-bottom:2rem;">
+              <div class="section-tag gold"><i class="fa-solid fa-calendar-plus"></i> Concierge Direct Entry</div>
+              <h3 style="font-size:1.65rem; color:var(--burgundy-dark); margin-bottom:0.4rem;">Create Client Reservation</h3>
+              <p style="color:var(--text-muted); font-size:0.92rem;">Direct administrative registration of new client bookings and VIP calendar holds.</p>
+            </div>
+
+            <form id="admin-booking-form" novalidate>
+              <div class="form-grid">
+                <!-- Customer Name -->
+                <div class="form-group">
+                  <label class="form-label" for="adm-book-name">
+                    <i class="fa-regular fa-user" style="color:var(--gold);"></i> Client Full Name <span class="required">*</span>
+                  </label>
+                  <input type="text" id="adm-book-name" class="form-control" placeholder="e.g. Marcus Sterling" pattern="[A-Za-z\s]+" title="Letters and spaces only" oninput="this.value = this.value.replace(/[^a-zA-Z\s]/g, '')" required>
+                </div>
+
+                <!-- Email Address -->
+                <div class="form-group">
+                  <label class="form-label" for="adm-book-email">
+                    <i class="fa-regular fa-envelope" style="color:var(--gold);"></i> Client Email <span class="required">*</span>
+                  </label>
+                  <input type="email" id="adm-book-email" class="form-control" placeholder="e.g. marcus@sterling.io" required>
+                </div>
+
+                <!-- Mobile Phone -->
+                <div class="form-group">
+                  <label class="form-label" for="adm-book-phone">
+                    <i class="fa-solid fa-phone" style="color:var(--gold);"></i> Mobile Number (10 Digits) <span class="required">*</span>
+                  </label>
+                  <input type="tel" id="adm-book-phone" maxlength="10" pattern="[0-9]{10}" inputmode="numeric" title="10-digit number" class="form-control" placeholder="e.g. 9123456780" oninput="this.value = this.value.replace(/\D/g, '').slice(0, 10)" required>
+                </div>
+
+                <!-- Event Type -->
+                <div class="form-group">
+                  <label class="form-label" for="adm-book-type">
+                    <i class="fa-solid fa-wand-magic-sparkles" style="color:var(--gold);"></i> Event Category <span class="required">*</span>
+                  </label>
+                  <select id="adm-book-type" class="form-control" required>
+                    <option value="">-- Select Event Category --</option>
+                    <option value="Luxury Wedding">Royal Wedding &amp; Reception</option>
+                    <option value="Corporate Gala" selected>Corporate Gala / Leadership Summit</option>
+                    <option value="Birthday Celebration">Milestone Birthday Celebration</option>
+                    <option value="Engagement Ceremony">Engagement &amp; Proposal Soirée</option>
+                    <option value="Anniversary Celebration">Golden / Silver Anniversary</option>
+                    <option value="Private Celebration">Private VIP Estate Soirée</option>
+                  </select>
+                </div>
+
+                <!-- Event Date -->
+                <div class="form-group">
+                  <label class="form-label" for="adm-book-date">
+                    <i class="fa-regular fa-calendar" style="color:var(--gold);"></i> Reservation Date <span class="required">*</span>
+                  </label>
+                  <input type="date" id="adm-book-date" class="form-control" required>
+                </div>
+
+                <!-- Number of Guests -->
+                <div class="form-group">
+                  <label class="form-label" for="adm-book-guests">
+                    <i class="fa-solid fa-users" style="color:var(--gold);"></i> Confirmed Guests <span class="required">*</span>
+                  </label>
+                  <input type="number" id="adm-book-guests" min="1" max="5000" class="form-control" placeholder="e.g. 300" required value="150">
+                </div>
+
+                <!-- Event Location -->
+                <div class="form-group">
+                  <label class="form-label" for="adm-book-location">
+                    <i class="fa-solid fa-location-dot" style="color:var(--gold);"></i> Venue / Ballroom <span class="required">*</span>
+                  </label>
+                  <input type="text" id="adm-book-location" class="form-control" placeholder="e.g. Skyline Terrace &amp; Pavilion" required>
+                </div>
+
+                <!-- Budget Range -->
+                <div class="form-group">
+                  <label class="form-label" for="adm-book-budget">
+                    <i class="fa-solid fa-dollar-sign" style="color:var(--gold);"></i> Contracted Budget <span class="required">*</span>
+                  </label>
+                  <select id="adm-book-budget" class="form-control" required>
+                    <option value="$5,000 - $10,000">$5,000 - $10,000 (Classic)</option>
+                    <option value="$10,000 - $25,000" selected>$10,000 - $25,000 (Royal Grande)</option>
+                    <option value="$25,000 - $50,000">$25,000 - $50,000 (Haute Curation)</option>
+                    <option value="$50,000+">$50,000+ (Imperial Bespoke)</option>
+                  </select>
+                </div>
+
+                <!-- Package Selection -->
+                <div class="form-group">
+                  <label class="form-label" for="adm-book-package">
+                    <i class="fa-solid fa-gem" style="color:var(--gold);"></i> Selected Package
+                  </label>
+                  <select id="adm-book-package" class="form-control">
+                    <option value="Classic Elegance">Classic Elegance</option>
+                    <option value="Royal Grande" selected>Royal Grande</option>
+                    <option value="Imperial Bespoke">Imperial Bespoke</option>
+                    <option value="Custom Curated">Custom Tailored Proposal</option>
+                  </select>
+                </div>
+
+                <!-- Initial Status -->
+                <div class="form-group">
+                  <label class="form-label" for="adm-book-status">
+                    <i class="fa-solid fa-shield-halved" style="color:var(--gold);"></i> Reservation Status
+                  </label>
+                  <select id="adm-book-status" class="form-control">
+                    <option value="Confirmed" selected>Confirmed (Deposit Received)</option>
+                    <option value="Pending">Pending Review</option>
+                  </select>
+                </div>
+
+                <!-- Vision & Notes -->
+                <div class="form-group full-width">
+                  <label class="form-label" for="adm-book-notes">
+                    <i class="fa-regular fa-comment-dots" style="color:var(--gold);"></i> Production Notes &amp; Special Directives
+                  </label>
+                  <textarea id="adm-book-notes" rows="4" class="form-control" placeholder="Production specifications, stage layout, lighting rider..."></textarea>
+                </div>
+              </div>
+
+              <div style="margin-top:2rem; display:flex; gap:1rem; flex-wrap:wrap;">
+                <button type="submit" class="btn btn-primary btn-lg">
+                  <i class="fa-solid fa-plus-circle"></i> Save &amp; Add Reservation
+                </button>
+                <button type="button" onclick="document.querySelector('[data-tab=adm-overview]').click()" class="btn btn-outline btn-lg">
+                  Cancel
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </main>
+  </div>
+
+  <!-- Add Event Modal -->
+  <div class="lightbox-modal" id="add-event-modal" aria-modal="true" role="dialog">
+    <div style="background:var(--ivory-light); max-width:550px; width:90%; border-radius:var(--radius-lg); border:2px solid var(--gold); padding:2.5rem; position:relative; box-shadow:0 25px 70px rgba(0,0,0,0.5); max-height:90vh; overflow-y:auto;">
+      <button onclick="document.getElementById('add-event-modal').classList.remove('active')" style="position:absolute; top:1.25rem; right:1.25rem; font-size:1.5rem; background:none; border:none; color:var(--burgundy); cursor:pointer;">&times;</button>
+      
+      <h3 style="font-size:1.4rem; color:var(--burgundy-dark); margin-bottom:1.25rem; text-align:center;">Create New Catalog Event</h3>
+      <form onsubmit="event.preventDefault(); document.getElementById('add-event-modal').classList.remove('active'); showToast('New event added to public catalog!', 'success'); this.reset();">
+        <div class="form-group">
+          <label class="form-label">Event Title</label>
+          <input type="text" class="form-control" placeholder="e.g. Monte Carlo Yacht Gala" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Venue Location</label>
+          <input type="text" class="form-control" placeholder="e.g. Monaco Yacht Club" required>
+        </div>
+        <div class="form-grid">
+          <div class="form-group">
+            <label class="form-label">Date</label>
+            <input type="date" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Capacity</label>
+            <input type="number" class="form-control" placeholder="250" required>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width:100%; margin-top:1rem;">Publish Event</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Admin Inspection Modal -->
+  <div class="lightbox-modal" id="admin-booking-inspect-modal" aria-modal="true" role="dialog">
+    <div style="background:var(--ivory-light); max-width:600px; width:90%; border-radius:var(--radius-lg); border:2px solid var(--gold); padding:2.5rem; position:relative; box-shadow:0 25px 70px rgba(0,0,0,0.5); max-height:90vh; overflow-y:auto;">
+      <button onclick="document.getElementById('admin-booking-inspect-modal').classList.remove('active')" style="position:absolute; top:1.25rem; right:1.25rem; font-size:1.5rem; background:none; border:none; color:var(--burgundy); cursor:pointer;">&times;</button>
+      
+      <div style="text-align:center; margin-bottom:1.5rem;">
+        <span class="status-badge confirmed" id="adm-modal-status">Confirmed</span>
+        <h3 style="font-size:1.6rem; color:var(--burgundy-dark); margin:0.75rem 0 0.25rem 0;" id="adm-modal-client">Client Inspection</h3>
+        <p style="color:var(--text-muted); font-size:0.85rem;" id="adm-modal-id">Booking #EVT-9041</p>
+      </div>
+
+      <div style="background:var(--ivory); padding:1.25rem; border-radius:var(--radius-md); border:1px solid var(--ivory-dark); margin-bottom:1.5rem; font-size:0.9rem; display:flex; flex-direction:column; gap:0.6rem;">
+        <div><strong>Email:</strong> <span id="adm-modal-email">client@example.com</span></div>
+        <div><strong>Phone:</strong> <span id="adm-modal-phone">9876543210</span></div>
+        <div><strong>Venue:</strong> <span id="adm-modal-location">The Grand Ballroom</span></div>
+        <div><strong>Date:</strong> <span id="adm-modal-date">2026-11-18</span></div>
+        <div><strong>Guests:</strong> <span id="adm-modal-guests">350</span></div>
+        <div><strong>Package:</strong> <span id="adm-modal-package">Imperial Bespoke</span></div>
+        <div><strong>Notes:</strong> <span id="adm-modal-notes">Burgundy theme.</span></div>
+      </div>
+
+      <div style="display:flex; gap:0.75rem; justify-content:center;">
+        <button onclick="updateBookingStatus(document.getElementById('adm-modal-id').dataset.rawId, 'Confirmed'); document.getElementById('admin-booking-inspect-modal').classList.remove('active');" class="btn btn-sm" style="background:#E8F8F0; color:#1E8449; padding:0.6rem 1.25rem; font-weight:700;"><i class="fa-solid fa-check"></i> Approve</button>
+        <button onclick="updateBookingStatus(document.getElementById('adm-modal-id').dataset.rawId, 'Rejected'); document.getElementById('admin-booking-inspect-modal').classList.remove('active');" class="btn btn-sm" style="background:#FDEDEC; color:#C0392B; padding:0.6rem 1.25rem; font-weight:700;"><i class="fa-solid fa-xmark"></i> Reject</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="toast-container"></div>
+  <script src="js/script.js"></script>
+</body>
+</html>

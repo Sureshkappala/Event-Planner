@@ -1,0 +1,460 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curated Investment Packages & Comparison | Stackly Luxury Event Planner</title>
+  <meta name="description" content="Explore Basic, Premium, and Luxury Stackly event planning tiers.">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="container">
+      <div class="top-bar-inner">
+        <div class="top-bar-info">
+          <span><i class="fa-solid fa-location-dot" style="color:var(--gold);"></i> 742 Evergreen Plaza, Luxury Row, New York</span>
+          <a href="tel:+18005553836"><i class="fa-solid fa-phone" style="color:var(--gold);"></i> +1 (800) 555-EVNT</a>
+          <a href="mailto:concierge@stacklyevents.com"><i class="fa-solid fa-envelope" style="color:var(--gold);"></i> concierge@stacklyevents.com</a>
+        </div>
+        <div class="top-bar-social">
+          <a href="404.html" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="404.html" aria-label="Pinterest"><i class="fa-brands fa-pinterest"></i></a>
+          <a href="404.html" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="404.html" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <header class="main-header">
+    <div class="container">
+      <nav class="navbar">
+        <a href="index.html" class="brand-logo" aria-label="Stackly Home">
+          <img src="assets/images/logo.png" alt="Stackly" class="logo-img">
+        </a>
+
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link ">Home</a></li>
+          <li><a href="about.html" class="nav-link ">About</a></li>
+          <li><a href="services.html" class="nav-link ">Services</a></li>
+          <li><a href="events.html" class="nav-link ">Events</a></li>
+          <li><a href="gallery.html" class="nav-link ">Gallery</a></li>
+          <li><a href="packages.html" class="nav-link active">Packages</a></li>
+          <li><a href="contact.html" class="nav-link ">Contact</a></li>
+          </ul>
+
+        <div class="nav-cta-group">
+          <a href="login.html" class="btn btn-nav-login btn-sm">
+            <i class="fa-regular fa-user"></i> Login
+          </a>
+          <a href="book-event.html" class="btn btn-primary btn-sm">
+            <i class="fa-regular fa-calendar-check"></i> Book an Event
+          </a>
+          <button class="hamburger-btn" id="hamburger-btn" aria-label="Toggle Navigation Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+    <!-- Mobile Navigation Drawer Backdrop -->
+  <div class="mobile-nav-backdrop" id="mobile-backdrop"></div>
+
+  <!-- Mobile Navigation Drawer -->
+  <aside class="mobile-nav-drawer" id="mobile-drawer" aria-label="Mobile Navigation">
+    <div class="mobile-drawer-header">
+      <a href="index.html" class="brand-logo" aria-label="Stackly Home">
+        <img src="assets/images/logo.png" alt="Stackly" class="logo-img">
+      </a>
+      <button class="drawer-close-btn" id="drawer-close-btn" aria-label="Close menu">&times;</button>
+    </div>
+
+    <ul class="mobile-nav-links">
+      <li><a href="index.html" class="nav-link"><span>Home</span> <i class="fa-solid fa-arrow-right"></i></a></li>
+      <li><a href="about.html" class="nav-link"><span>About Us</span> <i class="fa-solid fa-arrow-right"></i></a></li>
+      <li><a href="services.html" class="nav-link"><span>Services</span> <i class="fa-solid fa-arrow-right"></i></a></li>
+      <li><a href="events.html" class="nav-link"><span>Events</span> <i class="fa-solid fa-arrow-right"></i></a></li>
+      <li><a href="gallery.html" class="nav-link"><span>Gallery</span> <i class="fa-solid fa-arrow-right"></i></a></li>
+      <li><a href="packages.html" class="nav-link"><span>Packages</span> <i class="fa-solid fa-arrow-right"></i></a></li>
+      <li><a href="contact.html" class="nav-link"><span>Contact</span> <i class="fa-solid fa-arrow-right"></i></a></li>
+      <li><a href="dashboard-user.html" class="nav-link"><span>Customer Dashboard</span> <i class="fa-solid fa-arrow-right"></i></a></li>
+      <li><a href="dashboard-admin.html" class="nav-link"><span>Agency Admin</span> <i class="fa-solid fa-arrow-right"></i></a></li>
+    </ul>
+
+    <div class="mobile-drawer-footer">
+      <div class="drawer-actions-group">
+        <a href="login.html" class="btn btn-drawer-login">
+          Account Login
+        </a>
+        <a href="book-event.html" class="btn btn-primary" style="width:100%;">
+          Book an Event
+        </a>
+      </div>
+
+      <div class="drawer-contact-box">
+        <a href="tel:+18005553868" class="drawer-contact-item">
+          <i class="fa-solid fa-phone"></i>
+          <span><strong>+1 (800) 555-EVNT</strong> (24/7 VIP)</span>
+        </a>
+        <a href="mailto:concierge@stacklyevents.com" class="drawer-contact-item">
+          <i class="fa-solid fa-envelope"></i>
+          <span>concierge@stacklyevents.com</span>
+        </a>
+      </div>
+    </div>
+  </aside>
+
+  <section class="page-banner">
+    <div class="container">
+      <div class="page-banner-content">
+        <h1>Curated Event Packages</h1>
+        <p>Transparent pricing, bespoke inclusions, and uncompromising attention to detail.</p>
+        <div class="breadcrumb">
+          <a href="index.html">Home</a> <i class="fa-solid fa-chevron-right" style="font-size:0.65rem;"></i> <span>Packages</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="packages-section">
+    <div class="container">
+      <div class="packages-grid">
+        <div class="package-card">
+          <div class="package-header">
+            <h3 class="package-name">Classic Elegance</h3>
+            <p class="package-tagline">Ideal for intimate weddings, anniversaries, and VIP dinner parties.</p>
+            <div class="package-price">
+              <span class="currency">$</span><span class="amount">2,500</span><span class="period"> / baseline</span>
+            </div>
+          </div>
+          <ul class="package-features">
+            <li><i class="fa-solid fa-circle-check"></i> Up to 100 Invited Guests</li>
+            <li><i class="fa-solid fa-circle-check"></i> Concept styling & floral centerpiece design</li>
+            <li><i class="fa-solid fa-circle-check"></i> Vendor liaison & timeline curation</li>
+            <li><i class="fa-solid fa-circle-check"></i> Day-of Lead Concierge (8 Hours)</li>
+            <li><i class="fa-solid fa-circle-check"></i> Standard ambient sound & illumination</li>
+          </ul>
+          <a href="book-event.html?package=Classic+Elegance" class="btn btn-outline" style="width:100%;">Choose Classic</a>
+        </div>
+
+        <div class="package-card featured">
+          <div class="package-badge"><i class="fa-solid fa-star"></i> Most Requested</div>
+          <div class="package-header">
+            <h3 class="package-name">Royal Grande</h3>
+            <p class="package-tagline">Our signature full-service production for landmark weddings and corporate galas.</p>
+            <div class="package-price">
+              <span class="currency">$</span><span class="amount">5,900</span><span class="period"> / baseline</span>
+            </div>
+          </div>
+          <ul class="package-features">
+            <li><i class="fa-solid fa-circle-check"></i> Up to 350 Invited Guests</li>
+            <li><i class="fa-solid fa-circle-check"></i> Complete 3D Spatial rendering & moodboards</li>
+            <li><i class="fa-solid fa-circle-check"></i> Full gourmet menu tastings & mixology bar</li>
+            <li><i class="fa-solid fa-circle-check"></i> Full senior concierge team (Unlimited Day-of)</li>
+            <li><i class="fa-solid fa-circle-check"></i> Dynamic architectural lighting & live sound</li>
+            <li><i class="fa-solid fa-circle-check"></i> Custom entrance photo-installations</li>
+          </ul>
+          <a href="book-event.html?package=Royal+Grande" class="btn btn-primary" style="width:100%;">Select Royal Grande</a>
+        </div>
+
+        <div class="package-card">
+          <div class="package-header">
+            <h3 class="package-name">Imperial Bespoke</h3>
+            <p class="package-tagline">Ultimate high-luxury atelier planning with no creative limits.</p>
+            <div class="package-price">
+              <span class="currency">$</span><span class="amount">12,500</span><span class="period"> / baseline</span>
+            </div>
+          </div>
+          <ul class="package-features">
+            <li><i class="fa-solid fa-circle-check"></i> Unlimited Guest Count & Multi-Day Galas</li>
+            <li><i class="fa-solid fa-circle-check"></i> Private estate & international destination buyouts</li>
+            <li><i class="fa-solid fa-circle-check"></i> Michelin-star chef collaboration & pairing</li>
+            <li><i class="fa-solid fa-circle-check"></i> Bespoke fireworks & pyrotechnic displays</li>
+            <li><i class="fa-solid fa-circle-check"></i> A-list celebrity talent coordination</li>
+            <li><i class="fa-solid fa-circle-check"></i> 24/7 Dedicated Principal Director concierge</li>
+          </ul>
+          <a href="book-event.html?package=Imperial+Bespoke" class="btn btn-outline" style="width:100%;">Inquire Imperial</a>
+        </div>
+      </div>
+
+      <!-- Comparison Matrix -->
+      <div style="margin-top:5rem;">
+        <div class="section-header">
+          <div class="section-tag gold"><i class="fa-solid fa-table-list"></i> Feature Matrix</div>
+          <h2 class="section-title">Detailed Inclusions Comparison</h2>
+        </div>
+
+        <div style="overflow-x:auto;">
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th>Inclusions & Capabilities</th>
+                <th>Classic Elegance</th>
+                <th>Royal Grande</th>
+                <th>Imperial Bespoke</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Guest Capacity Limit</td>
+                <td>Up to 100</td>
+                <td>Up to 350</td>
+                <td>Unlimited</td>
+              </tr>
+              <tr>
+                <td>3D Spatial Floorplans & Renderings</td>
+                <td><i class="fa-solid fa-times"></i></td>
+                <td><i class="fa-solid fa-check"></i></td>
+                <td><i class="fa-solid fa-check"></i></td>
+              </tr>
+              <tr>
+                <td>Dedicated Lead Concierge on Day-of</td>
+                <td>8 Hours</td>
+                <td>Full Day (16 hrs)</td>
+                <td>24/7 Multi-Day Crew</td>
+              </tr>
+              <tr>
+                <td>Custom Floral Arch & Table Installations</td>
+                <td>Standard</td>
+                <td>Bespoke Grand</td>
+                <td>Couture Imported Exotic</td>
+              </tr>
+              <tr>
+                <td>Audiovisual & Architectural Illumination</td>
+                <td>Ambient Basic</td>
+                <td>Dynamic DMX Lighting</td>
+                <td>Concert Stage Grade</td>
+              </tr>
+              <tr>
+                <td>Michelin Chef / Sommelier Curation</td>
+                <td><i class="fa-solid fa-times"></i></td>
+                <td>Available Add-on</td>
+                <td><i class="fa-solid fa-check"></i> Included</td>
+              </tr>
+              <tr>
+                <td>Private Fireworks & Pyrotechnics</td>
+                <td><i class="fa-solid fa-times"></i></td>
+                <td><i class="fa-solid fa-times"></i></td>
+                <td><i class="fa-solid fa-check"></i> Included</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3: A La Carte Add-On Enhancements -->
+  <section class="page-section section-white">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag gold"><i class="fa-solid fa-gem"></i> Custom Enhancements</div>
+        <h2 class="section-title">A La Carte Experiential Add-Ons</h2>
+        <p class="section-subtitle">
+          Personalize any package tier with bespoke signature production elements.
+        </p>
+      </div>
+
+      <div class="values-grid">
+        <div class="value-card">
+          <div class="value-icon"><i class="fa-solid fa-drone"></i></div>
+          <h3>Cinematic 4K Drone Filming</h3>
+          <p>Dual licensed drone pilots capturing sweeping 4K estate flyovers, sunset arrivals, and grand guest toasts. <em>+$1,800</em></p>
+        </div>
+
+        <div class="value-card">
+          <div class="value-icon"><i class="fa-solid fa-icicles"></i></div>
+          <h3>Hand-Carved Ice Sculptures</h3>
+          <p>Custom monogrammed ice bars, seafood chillers, and crystal clear spirit fountains. <em>+$2,200</em></p>
+        </div>
+
+        <div class="value-card">
+          <div class="value-icon"><i class="fa-solid fa-champagne-glasses"></i></div>
+          <h3>10-Tier Champagne Tower</h3>
+          <p>Vintage Baccarat crystal champagne tower with synchronized dry ice fog effect and host sabrage ceremony. <em>+$1,500</em></p>
+        </div>
+
+        <div class="value-card">
+          <div class="value-icon"><i class="fa-solid fa-compact-disc"></i></div>
+          <h3>Celebrity Afterparty DJ Set</h3>
+          <p>World-class club DJ procurement with full staging, laser projection, and CO2 cryo cannon cannons. <em>+$4,500</em></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 4: Flexible Milestone Payment Schedule -->
+  <section class="page-section section-dark">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag gold" style="color:var(--gold-light);"><i class="fa-solid fa-wallet"></i> Transparent Billing</div>
+        <h2 class="section-title">Flexible 3-Stage Milestone Payment Plan</h2>
+        <p class="section-subtitle">
+          We offer clear milestone-based financial schedules for effortless budgeting.
+        </p>
+      </div>
+
+      <div class="roadmap-grid">
+        <div class="roadmap-card">
+          <span class="roadmap-number">30%</span>
+          <h4>Date & Venue Lock Deposit</h4>
+          <p>Secures your exclusive event date on our master production calendar and initiates venue contract negotiations.</p>
+        </div>
+
+        <div class="roadmap-card">
+          <span class="roadmap-number">40%</span>
+          <h4>Design & Vendor Milestone</h4>
+          <p>Due 60 days prior to event following your approval of 3D spatial renders, floral prototypes, and tasting menus.</p>
+        </div>
+
+        <div class="roadmap-card">
+          <span class="roadmap-number">30%</span>
+          <h4>Final Execution Balance</h4>
+          <p>Due 14 days prior to event day, covering final guest count adjustments and production staff deployment.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 5: Package FAQ -->
+  <section class="page-section section-blush">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag gold"><i class="fa-solid fa-circle-question"></i> Package Inquiries</div>
+        <h2 class="section-title">Frequently Asked Package Questions</h2>
+        <p class="section-subtitle">
+          Everything you need to know about customizing packages and securing your dates.
+        </p>
+      </div>
+
+      <div class="accordion-wrapper">
+        <div class="accordion-item active">
+          <button class="accordion-header" type="button">
+            <span>Can we customize features between different package tiers?</span>
+            <span class="accordion-icon"><i class="fa-solid fa-chevron-down"></i></span>
+          </button>
+          <div class="accordion-body">
+            Yes! All three packages serve as baseline starting points. During your private design consultation, our Creative Director will assemble a completely bespoke proposal tailored to your vision.
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header" type="button">
+            <span>Are vendor payments included in the package price?</span>
+            <span class="accordion-icon"><i class="fa-solid fa-chevron-down"></i></span>
+          </button>
+          <div class="accordion-body">
+            Our package pricing covers end-to-end design, production direction, and staffing. Third-party vendor fees (catering, venue rental, liquor) are billed transparently at wholesale contracted rates with no hidden markups.
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header" type="button">
+            <span>What happens if our guest count changes?</span>
+            <span class="accordion-icon"><i class="fa-solid fa-chevron-down"></i></span>
+          </button>
+          <div class="accordion-body">
+            Guest counts can be adjusted seamlessly up to 14 business days prior to your celebration. We will adjust seating layouts, floral centerpieces, and place settings accordingly.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <!-- Main Footer -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Col 1: Brand & Social -->
+        <div class="footer-col footer-about">
+          <a href="index.html" class="brand-logo" aria-label="Stackly Home">
+            <img src="assets/images/logo-light.png" alt="Stackly" class="logo-img">
+          </a>
+          <p>
+            Architects of high-society celebrations, landmark weddings, and high-profile corporate galas worldwide.
+          </p>
+          <div class="footer-social">
+            <a href="404.html" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="404.html" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="404.html" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="404.html" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <!-- Col 2: Quick Links -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Stackly</a></li>
+            <li><a href="services.html">Bespoke Services</a></li>
+            <li><a href="events.html">Events Calendar</a></li>
+            <li><a href="gallery.html">Visual Portfolio</a></li>
+            <li><a href="packages.html">Pricing &amp; Packages</a></li>
+            <li><a href="contact.html">Contact Concierge</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: VIP Portals -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Client Concierge</h4>
+          <ul class="footer-links">
+            <li><a href="book-event.html">Reserve Event Date</a></li>
+            <li><a href="dashboard-user.html">Host VIP Dashboard</a></li>
+            <li><a href="dashboard-admin.html">Executive Director Suite</a></li>
+            <li><a href="login.html">Client Account Login</a></li>
+            <li><a href="register.html">Host Registration</a></li>
+            <li><a href="404.html">VIP Lounge Access</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Newsletter -->
+        <div class="footer-col footer-newsletter-col">
+          <h4 class="footer-heading">Luxury Gazette</h4>
+          <p class="footer-newsletter-desc">
+            Subscribe for private invitations, culinary previews, and event architectural inspirations.
+          </p>
+          <form class="newsletter-form" id="newsletter-form" action="#" method="POST" onsubmit="event.preventDefault(); if(window.showToast) window.showToast('Thank you for subscribing to the Luxury Gazette!', 'success'); this.reset();">
+            <div class="newsletter-input-group">
+              <input type="email" placeholder="Your Email Address" required aria-label="Your Email">
+              <button type="submit" class="btn-newsletter">Join</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Stackly Luxury Event Planner. All rights reserved. Designed for extraordinary milestones.</p>
+        <div class="footer-bottom-links">
+          <a href="404.html">Privacy Policy</a>
+          <a href="404.html">Terms of Service</a>
+          <a href="404.html">Security Protocol</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="lightbox-modal" id="gallery-lightbox" aria-modal="true" role="dialog">
+    <button class="lightbox-close" aria-label="Close lightbox">&times;</button>
+    <button class="lightbox-nav lightbox-prev" aria-label="Previous image"><i class="fa-solid fa-chevron-left"></i></button>
+    <div class="lightbox-content">
+      <img src="" alt="Stackly Showcase" class="lightbox-image">
+      <div class="lightbox-caption"></div>
+    </div>
+    <button class="lightbox-nav lightbox-next" aria-label="Next image"><i class="fa-solid fa-chevron-right"></i></button>
+  </div>
+
+  <div id="toast-container"></div>
+  <script src="js/script.js"></script>
+</body>
+</html>
+
+

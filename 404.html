@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 - Lost in the Grandeur? | Stackly Luxury Event Planner</title>
+  <meta name="description" content="The page you are looking for is unavailable. Return to Stackly Luxury Event Planner.">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="auth-page">
+    <div class="auth-container" style="max-width: 580px; text-align: center;">
+      <!-- Brand Logo -->
+      <div class="auth-header" style="margin-bottom: 1.25rem;">
+        <a href="index.html" class="brand-logo" aria-label="Stackly Home">
+          <img src="assets/images/logo.png" alt="Stackly" class="logo-img">
+        </a>
+      </div>
+
+      <!-- 404 Headline & Badge -->
+      <div style="margin-bottom: 1.25rem;">
+        <div class="text-gold-gradient" style="font-size: clamp(4.75rem, 12vw, 7.5rem); font-family: var(--font-serif); font-weight: 800; line-height: 0.95; letter-spacing: -0.02em;">
+          404
+        </div>
+        <div style="display: flex; justify-content: center; margin-top: 1rem;">
+          <div class="section-tag gold" style="margin-bottom: 0;">
+            <i class="fa-solid fa-sparkles"></i> Page Relocated &bull; Salon Unavailable
+          </div>
+        </div>
+      </div>
+
+      <h1 style="font-size: clamp(1.65rem, 3.2vw, 2.25rem); color: var(--burgundy-dark); margin-bottom: 0.85rem; font-family: var(--font-serif);">
+        Lost in the Grandeur?
+      </h1>
+      
+      <p style="color: var(--text-body); font-size: clamp(0.92rem, 1.6vw, 1.05rem); line-height: 1.65; margin-bottom: 2rem;">
+        The private salon or bespoke event page you are seeking has either concluded its season, moved to our private archive, or does not exist. Allow us to guide you back.
+      </p>
+
+      <!-- Primary Action Buttons: Go Back & Back to Home -->
+      <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+        <button type="button" onclick="if(window.history.length > 1){ window.history.back(); } else { window.location.href='index.html'; }" class="btn btn-outline btn-lg" style="flex: 1 1 200px; cursor: pointer;">
+          <i class="fa-solid fa-arrow-left"></i> Go Back
+        </button>
+        <a href="index.html" class="btn btn-primary btn-lg" style="flex: 1 1 200px;">
+          <i class="fa-solid fa-house"></i> Back to Home
+        </a>
+      </div>
+
+      <!-- Quick Helpful Nav Links -->
+      <div style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgba(212, 175, 55, 0.25); display: flex; justify-content: center; align-items: center; gap: 1.25rem; flex-wrap: wrap; font-size: 0.85rem; color: var(--text-muted);">
+        <a href="services.html" style="color: var(--burgundy); font-weight: 600; display: inline-flex; align-items: center; gap: 0.35rem;">
+          <i class="fa-solid fa-wand-magic-sparkles" style="color: var(--gold-dark);"></i> Haute Services
+        </a>
+        <span style="color: rgba(212, 175, 55, 0.4);">&bull;</span>
+        <a href="events.html" style="color: var(--burgundy); font-weight: 600; display: inline-flex; align-items: center; gap: 0.35rem;">
+          <i class="fa-solid fa-champagne-glasses" style="color: var(--gold-dark);"></i> Curated Galas
+        </a>
+        <span style="color: rgba(212, 175, 55, 0.4);">&bull;</span>
+        <a href="contact.html" style="color: var(--burgundy); font-weight: 600; display: inline-flex; align-items: center; gap: 0.35rem;">
+          <i class="fa-solid fa-headset" style="color: var(--gold-dark);"></i> VIP Concierge
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div id="toast-container"></div>
+  <script src="js/script.js"></script>
+</body>
+</html>

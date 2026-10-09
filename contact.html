@@ -1,0 +1,521 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Our Luxury Concierge | Stackly Luxury Event Planner</title>
+  <meta name="description" content="Connect with Stackly planners via private consultation, telephone, or message.">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="container">
+      <div class="top-bar-inner">
+        <div class="top-bar-info">
+          <span><i class="fa-solid fa-location-dot" style="color:var(--gold);"></i> 742 Evergreen Plaza, Luxury Row, New York</span>
+          <a href="tel:+18005553836"><i class="fa-solid fa-phone" style="color:var(--gold);"></i> +1 (800) 555-EVNT</a>
+          <a href="mailto:concierge@stacklyevents.com"><i class="fa-solid fa-envelope" style="color:var(--gold);"></i> concierge@stacklyevents.com</a>
+        </div>
+        <div class="top-bar-social">
+          <a href="404.html" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="404.html" aria-label="Pinterest"><i class="fa-brands fa-pinterest"></i></a>
+          <a href="404.html" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="404.html" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <header class="main-header">
+    <div class="container">
+      <nav class="navbar">
+        <a href="index.html" class="brand-logo" aria-label="Stackly Home">
+          <img src="assets/images/logo.png" alt="Stackly" class="logo-img">
+        </a>
+
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link ">Home</a></li>
+          <li><a href="about.html" class="nav-link ">About</a></li>
+          <li><a href="services.html" class="nav-link ">Services</a></li>
+          <li><a href="events.html" class="nav-link ">Events</a></li>
+          <li><a href="gallery.html" class="nav-link ">Gallery</a></li>
+          <li><a href="packages.html" class="nav-link ">Packages</a></li>
+          <li><a href="contact.html" class="nav-link active">Contact</a></li>
+          </ul>
+
+        <div class="nav-cta-group">
+          <a href="login.html" class="btn btn-nav-login btn-sm">
+            <i class="fa-regular fa-user"></i> Login
+          </a>
+          <a href="book-event.html" class="btn btn-primary btn-sm">
+            <i class="fa-regular fa-calendar-check"></i> Book an Event
+          </a>
+          <button class="hamburger-btn" id="hamburger-btn" aria-label="Toggle Navigation Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+    <!-- Mobile Navigation Drawer Backdrop -->
+  <div class="mobile-nav-backdrop" id="mobile-backdrop"></div>
+
+  <!-- Mobile Navigation Drawer -->
+  <aside class="mobile-nav-drawer" id="mobile-drawer" aria-label="Mobile Navigation">
+    <div class="mobile-drawer-header">
+      <a href="index.html" class="brand-logo" aria-label="Stackly Home">
+        <img src="assets/images/logo.png" alt="Stackly" class="logo-img">
+      </a>
+      <button class="drawer-close-btn" id="drawer-close-btn" aria-label="Close menu">&times;</button>
+    </div>
+
+    <ul class="mobile-nav-links">
+      <li><a href="index.html" class="nav-link"><span>Home</span> <i class="fa-solid fa-arrow-right"></i></a></li>
+      <li><a href="about.html" class="nav-link"><span>About Us</span> <i class="fa-solid fa-arrow-right"></i></a></li>
+      <li><a href="services.html" class="nav-link"><span>Services</span> <i class="fa-solid fa-arrow-right"></i></a></li>
+      <li><a href="events.html" class="nav-link"><span>Events</span> <i class="fa-solid fa-arrow-right"></i></a></li>
+      <li><a href="gallery.html" class="nav-link"><span>Gallery</span> <i class="fa-solid fa-arrow-right"></i></a></li>
+      <li><a href="packages.html" class="nav-link"><span>Packages</span> <i class="fa-solid fa-arrow-right"></i></a></li>
+      <li><a href="contact.html" class="nav-link"><span>Contact</span> <i class="fa-solid fa-arrow-right"></i></a></li>
+      <li><a href="dashboard-user.html" class="nav-link"><span>Customer Dashboard</span> <i class="fa-solid fa-arrow-right"></i></a></li>
+      <li><a href="dashboard-admin.html" class="nav-link"><span>Agency Admin</span> <i class="fa-solid fa-arrow-right"></i></a></li>
+    </ul>
+
+    <div class="mobile-drawer-footer">
+      <div class="drawer-actions-group">
+        <a href="login.html" class="btn btn-drawer-login">
+          Account Login
+        </a>
+        <a href="book-event.html" class="btn btn-primary" style="width:100%;">
+          Book an Event
+        </a>
+      </div>
+
+      <div class="drawer-contact-box">
+        <a href="tel:+18005553868" class="drawer-contact-item">
+          <i class="fa-solid fa-phone"></i>
+          <span><strong>+1 (800) 555-EVNT</strong> (24/7 VIP)</span>
+        </a>
+        <a href="mailto:concierge@stacklyevents.com" class="drawer-contact-item">
+          <i class="fa-solid fa-envelope"></i>
+          <span>concierge@stacklyevents.com</span>
+        </a>
+      </div>
+    </div>
+  </aside>
+
+  <section class="page-banner">
+    <div class="container">
+      <div class="page-banner-content">
+        <h1>Connect with Our Concierge</h1>
+        <p>Our senior event architects are at your service for private consultations.</p>
+        <div class="breadcrumb">
+          <a href="index.html">Home</a> <i class="fa-solid fa-chevron-right" style="font-size:0.65rem;"></i> <span>Contact</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about-section">
+    <div class="container">
+      <div class="about-grid">
+        <div>
+          <div class="section-tag"><i class="fa-solid fa-headset"></i> Direct Channels</div>
+          <h2 class="section-title">Let's Discuss Your Vision</h2>
+          <p class="section-desc">
+            Whether you are planning a royal wedding across the globe or an intimate private gathering, our doors in Manhattan are open for private tea and concept exploration.
+          </p>
+
+          <div style="display:flex; flex-direction:column; gap:1.25rem; margin:2rem 0;">
+            <div style="display:flex; align-items:flex-start; gap:1rem;">
+              <div class="about-feature-icon"><i class="fa-solid fa-location-dot"></i></div>
+              <div>
+                <h4 style="font-size:1.05rem; color:var(--burgundy-dark);">Atelier Headquarters</h4>
+                <p style="font-size:0.9rem; color:#665F60;">742 Evergreen Plaza, Luxury Row, 5th Floor, New York, NY 10022</p>
+              </div>
+            </div>
+
+            <div style="display:flex; align-items:flex-start; gap:1rem;">
+              <div class="about-feature-icon"><i class="fa-solid fa-phone"></i></div>
+              <div>
+                <h4 style="font-size:1.05rem; color:var(--burgundy-dark);">Telephone & Hotline</h4>
+                <p style="font-size:0.9rem; color:#665F60;">+1 (800) 555-EVNT (Toll Free) | +1 (212) 555-0199 (Direct Desk)</p>
+              </div>
+            </div>
+
+            <div style="display:flex; align-items:flex-start; gap:1rem;">
+              <div class="about-feature-icon"><i class="fa-solid fa-envelope"></i></div>
+              <div>
+                <h4 style="font-size:1.05rem; color:var(--burgundy-dark);">Electronic Inquiries</h4>
+                <p style="font-size:0.9rem; color:#665F60;">concierge@stacklyevents.com | press@stacklyevents.com</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ Accordion -->
+          <h3 style="margin-top:2.5rem; margin-bottom:1rem; color:var(--burgundy-dark);">Frequently Inquired Questions</h3>
+          
+          <div class="accordion-item active">
+            <div class="accordion-header">
+              <span>How far in advance should we book?</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="accordion-body">
+              For large-scale weddings and summits (200+ attendees), we recommend reserving 6 to 12 months in advance. For private soirees, 4 to 8 weeks is typically sufficient.
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <div class="accordion-header">
+              <span>Do you coordinate destination celebrations outside the US?</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="accordion-body">
+              Yes, our team routinely orchestrates destination galas across Lake Como, Paris, the Amalfi Coast, Kyoto, and the Caribbean islands.
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <div class="accordion-header">
+              <span>Can we customize our package inclusions?</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="accordion-body">
+              Every package serves as a refined baseline. We routinely tailor bespoke floral sculptors, celebrity entertainment, and sommelier menus.
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="form-card">
+            <h3 style="color:var(--burgundy-dark); margin-bottom:0.5rem;">Send an Inquiry</h3>
+            <p style="color:#665F60; font-size:0.9rem; margin-bottom:1.5rem;">Our concierge responds within 24 hours.</p>
+
+            <form id="contact-inquiry-form">
+              <div class="form-group">
+                <label class="form-label" for="c-name">Full Name <span class="required">*</span></label>
+                <input type="text" id="c-name" class="form-control" placeholder="Your Name" pattern="[A-Za-z\s]+" title="Letters and spaces only" oninput="this.value = this.value.replace(/[^a-zA-Z\s]/g, '')" required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="c-email">Email Address <span class="required">*</span></label>
+                <input type="email" id="c-email" class="form-control" placeholder="you@example.com" required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="c-phone">Phone Number</label>
+                <input type="tel" id="c-phone" class="form-control" placeholder="10-digit mobile number" maxlength="10" pattern="[0-9]{10}" inputmode="numeric" title="10-digit number" oninput="this.value = this.value.replace(/\D/g, '').slice(0, 10)">
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="c-subject">Subject</label>
+                <input type="text" id="c-subject" class="form-control" placeholder="e.g. Wedding Inquiry in Lake Como">
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="c-msg">Your Message <span class="required">*</span></label>
+                <textarea id="c-msg" rows="4" class="form-control" placeholder="How can we bring your vision to life?" required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width:100%;">
+                <i class="fa-solid fa-paper-plane"></i> Send Direct Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Map Section: Stackly Global Headquarters -->
+  <section class="page-section" style="padding: 5.5rem 0; background: var(--ivory); border-top: 1px solid rgba(212, 175, 55, 0.2); border-bottom: 1px solid rgba(212, 175, 55, 0.2);">
+    <div class="container">
+      <div class="section-header" style="max-width: 760px; margin: 0 auto 3rem auto; text-align: center;">
+        <div class="section-tag gold"><i class="fa-solid fa-map-location-dot"></i> Visit Our Atelier</div>
+        <h2 class="section-title">Stackly Global Headquarters</h2>
+        <p class="section-desc">
+          Experience our bespoke event planning lounge in New York City. Meet in person with our senior celebration designers and event architects.
+        </p>
+      </div>
+
+      <div class="map-section-grid" style="display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 2rem; align-items: stretch;">
+        <!-- Embedded Google Map -->
+        <div class="map-frame-wrapper" style="border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md); border: 2px solid rgba(212, 175, 55, 0.35); min-height: 440px; position: relative; background: #EFEFEF;">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.3614657924765!2d-73.91696232347146!3d40.69083397139702!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25c3dc006b527%3A0x6b1070ff124d7778!2s742%20Evergreen%20Ave%2C%20Brooklyn%2C%20NY%2011207%2C%20USA!5e0!3m2!1sen!2sus!4v1710000000000!5m2!1sen!2sus" 
+            width="100%" 
+            height="100%" 
+            style="border:0; width:100%; height:100%; min-height:440px; display:block;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Stackly Global Headquarters Map">
+          </iframe>
+        </div>
+
+        <!-- Headquarters Info Card -->
+        <div class="hq-location-card" style="background: var(--ivory-light); border-radius: var(--radius-lg); padding: 2.5rem 2.25rem; border: 1.5px solid rgba(212, 175, 55, 0.35); box-shadow: var(--shadow-md); display: flex; flex-direction: column; justify-content: space-between; gap: 1.5rem;">
+          <div>
+            <span style="background: rgba(212, 175, 55, 0.15); color: var(--burgundy); border: 1px solid rgba(212, 175, 55, 0.4); padding: 0.35rem 0.95rem; border-radius: var(--radius-full); font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; display: inline-block; margin-bottom: 1rem;">
+              Flagship Headquarters
+            </span>
+            <h3 style="font-size: 1.65rem; color: var(--burgundy-dark); font-family: var(--font-serif); margin-bottom: 0.75rem;">
+              Stackly Luxury Event HQ
+            </h3>
+            <div style="display: flex; gap: 0.65rem; font-size: 0.95rem; color: var(--text-body); line-height: 1.5; margin-bottom: 1.5rem;">
+              <i class="fa-solid fa-location-dot" style="color: var(--gold-dark); font-size: 1.1rem; margin-top: 0.2rem; flex-shrink: 0;"></i>
+              <div>
+                <strong>742 Evergreen Plaza, Suite 400</strong><br>
+                New York, NY 10001, United States
+              </div>
+            </div>
+
+            <div style="display: flex; flex-direction: column; gap: 0.9rem; font-size: 0.92rem; color: var(--text-body); padding: 1.25rem 0; border-top: 1px solid rgba(212, 175, 55, 0.2); border-bottom: 1px solid rgba(212, 175, 55, 0.2);">
+              <div style="display: flex; align-items: flex-start; gap: 0.65rem;">
+                <i class="fa-solid fa-train-subway" style="color: var(--burgundy); margin-top: 0.25rem; width: 18px; text-align: center;"></i>
+                <span><strong>Transit:</strong> Penn Station (1/2/3/A/C/E) &amp; Herald Sq (B/D/F/M/N/Q/R/W)</span>
+              </div>
+              <div style="display: flex; align-items: flex-start; gap: 0.65rem;">
+                <i class="fa-solid fa-square-parking" style="color: var(--burgundy); margin-top: 0.25rem; width: 18px; text-align: center;"></i>
+                <span><strong>Parking:</strong> Complimentary reserved guest valet parking</span>
+              </div>
+              <div style="display: flex; align-items: flex-start; gap: 0.65rem;">
+                <i class="fa-solid fa-clock" style="color: var(--burgundy); margin-top: 0.25rem; width: 18px; text-align: center;"></i>
+                <span><strong>Hours:</strong> Mon – Sat: 8:00 AM – 8:00 PM EST</span>
+              </div>
+              <div style="display: flex; align-items: flex-start; gap: 0.65rem;">
+                <i class="fa-solid fa-phone" style="color: var(--burgundy); margin-top: 0.25rem; width: 18px; text-align: center;"></i>
+                <span><strong>Direct Desk:</strong> <a href="tel:+18005553836" style="color: var(--burgundy); font-weight: 700; text-decoration: none;">+1 (800) 555-EVNT</a></span>
+              </div>
+            </div>
+          </div>
+
+          <a href="https://maps.google.com/?q=742+Evergreen+Ave,+Brooklyn,+NY+11207" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="width: 100%; justify-content: center; font-weight: 700; padding: 0.95rem 1.5rem; font-size: 0.95rem;">
+            Open in Google Maps <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.85rem; margin-left: 0.35rem;"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3: Global Flagship Concierge Studios -->
+  <section class="page-section section-white">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag gold"><i class="fa-solid fa-earth-americas"></i> International Presence</div>
+        <h2 class="section-title">Global Flagship Concierge Studios</h2>
+        <p class="section-subtitle">
+          Visit our private design ateliers and consultation suites in the world's style capitals.
+        </p>
+      </div>
+
+      <div class="offices-grid">
+        <div class="office-card">
+          <span class="office-city-tag"><i class="fa-solid fa-location-pin"></i> Flagship Headquarters</span>
+          <h3>New York City</h3>
+          <ul class="office-info-list">
+            <li><i class="fa-solid fa-building"></i> 742 Fifth Avenue, Penthouse 18, Manhattan, NY 10022</li>
+            <li><i class="fa-solid fa-phone"></i> +1 (212) 555-0199</li>
+            <li><i class="fa-solid fa-clock"></i> Mon – Sat: 9:00 AM – 7:00 PM EST</li>
+            <li><i class="fa-solid fa-envelope"></i> newyork@stacklyevents.com</li>
+          </ul>
+        </div>
+
+        <div class="office-card">
+          <span class="office-city-tag"><i class="fa-solid fa-location-pin"></i> European Atelier</span>
+          <h3>London (Mayfair)</h3>
+          <ul class="office-info-list">
+            <li><i class="fa-solid fa-building"></i> 45 Berkeley Square, Mayfair, London W1J 5AS</li>
+            <li><i class="fa-solid fa-phone"></i> +44 20 7946 0912</li>
+            <li><i class="fa-solid fa-clock"></i> Mon – Fri: 10:00 AM – 6:30 PM GMT</li>
+            <li><i class="fa-solid fa-envelope"></i> london@stacklyevents.com</li>
+          </ul>
+        </div>
+
+        <div class="office-card">
+          <span class="office-city-tag"><i class="fa-solid fa-location-pin"></i> Middle East Studio</span>
+          <h3>Dubai (DIFC)</h3>
+          <ul class="office-info-list">
+            <li><i class="fa-solid fa-building"></i> Gate Precinct 4, Level 6, DIFC, Dubai, UAE</li>
+            <li><i class="fa-solid fa-phone"></i> +971 4 312 8899</li>
+            <li><i class="fa-solid fa-clock"></i> Sun – Thu: 9:30 AM – 7:00 PM GST</li>
+            <li><i class="fa-solid fa-envelope"></i> dubai@stacklyevents.com</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 4: Schedule Private Tasting & Consultation -->
+  <section class="page-section section-dark">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag gold" style="color:var(--gold-light);"><i class="fa-solid fa-champagne-glasses"></i> Private Salon</div>
+        <h2 class="section-title">Schedule a Private Tasting & Design Salon</h2>
+        <p class="section-subtitle">
+          Experience our culinary pairings, tactile linen swatches, and custom floral centerpiece concepts in person.
+        </p>
+      </div>
+
+      <div class="features-expanded-grid">
+        <div class="feature-expanded-card">
+          <div class="feature-expanded-icon"><i class="fa-solid fa-wine-bottle"></i></div>
+          <h3>Sommelier & Tasting Menu Preview</h3>
+          <p>Sample bespoke multi-course menus prepared live by our executive chef alongside premium vintage wine pairings.</p>
+        </div>
+
+        <div class="feature-expanded-card">
+          <div class="feature-expanded-icon"><i class="fa-solid fa-swatchbook"></i></div>
+          <h3>Tactile Material & Linen Archive</h3>
+          <p>Browse imported French silks, Belgian linens, handmade chargers, and custom typography wax seal samples.</p>
+        </div>
+
+        <div class="feature-expanded-card">
+          <div class="feature-expanded-icon"><i class="fa-solid fa-vr-cardboard"></i></div>
+          <h3>4K Spatial VR Simulation</h3>
+          <p>Walk through your chosen ballroom in virtual reality to preview lighting cues, guest traffic, and sightlines.</p>
+        </div>
+
+        <div class="feature-expanded-card">
+          <div class="feature-expanded-icon"><i class="fa-solid fa-calendar-check"></i></div>
+          <h3>Immediate Date Calendar Hold</h3>
+          <p>Place a complimentary 7-day courtesy hold on your preferred event date while your proposal is finalized.</p>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 3rem;">
+        <a href="book-event.html" class="btn btn-primary btn-lg"><i class="fa-regular fa-calendar-check"></i> Request Salon Appointment</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 5: Press & Media Partnerships -->
+  <section class="page-section section-blush">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag gold"><i class="fa-solid fa-bullhorn"></i> Media & Brand Inquiries</div>
+        <h2 class="section-title">Press, Media & Luxury Brand Collaborations</h2>
+        <p class="section-subtitle">
+          Dedicated contact channels for editorial features, celebrity talent, and luxury venue sponsorships.
+        </p>
+      </div>
+
+      <div class="values-grid">
+        <div class="value-card">
+          <div class="value-icon"><i class="fa-solid fa-camera-retro"></i></div>
+          <h3>Editorial & Press Requests</h3>
+          <p>High-resolution asset packs, interview requests with our founders, and editorial venue feature clearance. <br><strong>press@stacklyevents.com</strong></p>
+        </div>
+
+        <div class="value-card">
+          <div class="value-icon"><i class="fa-solid fa-handshake"></i></div>
+          <h3>Brand Collaborations & Sponsorship</h3>
+          <p>Product integration, luxury champagne brand partnerships, and VIP gift bag curation. <br><strong>partners@stacklyevents.com</strong></p>
+        </div>
+
+        <div class="value-card">
+          <div class="value-icon"><i class="fa-solid fa-briefcase"></i></div>
+          <h3>Careers & Artisan Auditions</h3>
+          <p>Join our international team of floral artisans, production managers, and lighting engineers. <br><strong>careers@stacklyevents.com</strong></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <!-- Main Footer -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Col 1: Brand & Social -->
+        <div class="footer-col footer-about">
+          <a href="index.html" class="brand-logo" aria-label="Stackly Home">
+            <img src="assets/images/logo-light.png" alt="Stackly" class="logo-img">
+          </a>
+          <p>
+            Architects of high-society celebrations, landmark weddings, and high-profile corporate galas worldwide.
+          </p>
+          <div class="footer-social">
+            <a href="404.html" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="404.html" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="404.html" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="404.html" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <!-- Col 2: Quick Links -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Stackly</a></li>
+            <li><a href="services.html">Bespoke Services</a></li>
+            <li><a href="events.html">Events Calendar</a></li>
+            <li><a href="gallery.html">Visual Portfolio</a></li>
+            <li><a href="packages.html">Pricing &amp; Packages</a></li>
+            <li><a href="contact.html">Contact Concierge</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: VIP Portals -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Client Concierge</h4>
+          <ul class="footer-links">
+            <li><a href="book-event.html">Reserve Event Date</a></li>
+            <li><a href="dashboard-user.html">Host VIP Dashboard</a></li>
+            <li><a href="dashboard-admin.html">Executive Director Suite</a></li>
+            <li><a href="login.html">Client Account Login</a></li>
+            <li><a href="register.html">Host Registration</a></li>
+            <li><a href="404.html">VIP Lounge Access</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Newsletter -->
+        <div class="footer-col footer-newsletter-col">
+          <h4 class="footer-heading">Luxury Gazette</h4>
+          <p class="footer-newsletter-desc">
+            Subscribe for private invitations, culinary previews, and event architectural inspirations.
+          </p>
+          <form class="newsletter-form" id="newsletter-form" action="#" method="POST" onsubmit="event.preventDefault(); if(window.showToast) window.showToast('Thank you for subscribing to the Luxury Gazette!', 'success'); this.reset();">
+            <div class="newsletter-input-group">
+              <input type="email" placeholder="Your Email Address" required aria-label="Your Email">
+              <button type="submit" class="btn-newsletter">Join</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Stackly Luxury Event Planner. All rights reserved. Designed for extraordinary milestones.</p>
+        <div class="footer-bottom-links">
+          <a href="404.html">Privacy Policy</a>
+          <a href="404.html">Terms of Service</a>
+          <a href="404.html">Security Protocol</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="lightbox-modal" id="gallery-lightbox" aria-modal="true" role="dialog">
+    <button class="lightbox-close" aria-label="Close lightbox">&times;</button>
+    <button class="lightbox-nav lightbox-prev" aria-label="Previous image"><i class="fa-solid fa-chevron-left"></i></button>
+    <div class="lightbox-content">
+      <img src="" alt="Stackly Showcase" class="lightbox-image">
+      <div class="lightbox-caption"></div>
+    </div>
+    <button class="lightbox-nav lightbox-next" aria-label="Next image"><i class="fa-solid fa-chevron-right"></i></button>
+  </div>
+
+  <div id="toast-container"></div>
+  <script src="js/script.js"></script>
+</body>
+</html>
+
+
