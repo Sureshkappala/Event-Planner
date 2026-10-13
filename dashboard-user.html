@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="dashboard-page">
 
   <div class="dashboard-layout">
     <!-- Sidebar / Drawer -->
@@ -94,7 +94,7 @@
 
             <div class="welcome-banner-actions">
               <button type="button" class="btn btn-outline-light btn-sm" onclick="document.querySelector('[data-tab=tab-profile]').click()">Account Settings</button>
-              <button type="button" class="btn btn-plan-new btn-sm" onclick="document.querySelector('[data-tab=tab-book-event]').click()">+ Plan New Trip</button>
+              <button type="button" class="btn btn-plan-new btn-sm" onclick="document.querySelector('[data-tab=tab-book-event]').click()">+ Plan New Event</button>
             </div>
           </div>
           <!-- KPI Summary Cards -->
@@ -133,7 +133,7 @@
           </div>
 
           <!-- Featured Next Event Highlight Banner -->
-          <div style="background:linear-gradient(135deg, var(--burgundy-dark) 0%, #1A0306 100%); color:var(--ivory-light); border-radius:var(--radius-lg); padding:2rem 2.25rem; border:2px solid var(--gold); box-shadow:var(--shadow-lg); margin-bottom:2.5rem; position:relative; overflow:hidden;">
+          <div class="dashboard-featured-card">
             <div style="position:relative; z-index:2; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1.75rem;">
               <div style="max-width:540px;">
                 <span class="status-badge confirmed" style="margin-bottom:0.75rem; display:inline-block;"><i class="fa-solid fa-star"></i> Featured Next Event</span>
